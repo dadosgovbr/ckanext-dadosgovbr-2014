@@ -1,0 +1,11 @@
+setup.py
+ckanext/__init__.py
+ckanext/dadosgovbr/__init__.py
+ckanext/dadosgovbr/plugin.py
+ckanext_dadosgovbr.egg-info/PKG-INFO
+ckanext_dadosgovbr.egg-info/SOURCES.txt
+ckanext_dadosgovbr.egg-info/dependency_links.txt
+ckanext_dadosgovbr.egg-info/entry_points.txt
+ckanext_dadosgovbr.egg-info/namespace_packages.txt
+ckanext_dadosgovbr.egg-info/not-zip-safe
+ckanext_dadosgovbr.egg-info/top_level.txt

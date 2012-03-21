@@ -1,0 +1,4 @@
+
+        [ckan.plugins]
+        dadosgovbr_theme=ckanext.dadosgovbr.plugin:DadosGovBrTheme
+	
