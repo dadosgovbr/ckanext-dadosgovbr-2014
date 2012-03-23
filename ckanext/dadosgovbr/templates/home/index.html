@@ -4,62 +4,205 @@
   py:strip="">
   
   <py:def function="page_title">Welcome</py:def>
-
     <div py:match="//div[@id='content']" class="front-page">
-      <div class="span-24 last">
-        <h1>Welcome to ${g.site_title}!</h1>
-      </div>
-      <div class="span-8 action-box">
-        <div class="action-box-inner find">
-          <h1>Find data</h1>
 
-          <form action="${h.url_for(controller='package', action='search')}" method="GET"> 
-            <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" /> 
-          </form> 
-          ${g.site_title} contains <a href="${h.url_for(controller='package', action='search')}">${c.package_count} datasets</a> that you can 
-          browse, learn about and download. 
-        </div>
-      </div>
-      <div class="span-8 action-box">
-        <div class="action-box-inner share">
-        <h1>Share data</h1>
+      <div role='main'>
 
-        Add your own datasets to share them with others and
-        to find other people interested in your data.
-        
-        <py:choose test="h.am_authorized(c, actions.PACKAGE_CREATE)">
-          <a py:when="" href="${h.url_for(controller='package', action='new')}" class="create-button">Create a dataset &raquo;</a>
-          <py:otherwise>
-            <a href="${h.url_for(controller='user', action='login')}" class="create-button">Sign up &raquo;</a>
-          </py:otherwise>
-        </py:choose>
-        </div>
-      </div>
-      <div class="span-8 last action-box">
-        <div class="action-box-inner collaborate">
-        <h1>Collaborate</h1>
+        <form action="${h.url_for(controller='package', action='search')}" id="search" method="GET">
+          <input class="search-field" name="q" type="text" placeholder="busca" id="busca" />
+          <input type="submit" alt="buscar" value="" id="btnbusca" />
+        </form>
+        <section id="featureddata">
+          <h1> Dados em destaque </h1>
+          <article>
+          <h2><a href="#">Open data is the raw material of 'new industrial revolution'‎</a></h2>
+          <p>But what is the point of open data? Even those who applaud the commitment to transparency that progressively releasing this information demonstrates need to ...</p>
+          </article>
+          <article>
+          <h2><a href="#">Economia online gira US$ 46 bilhões no Brasil</a></h2>
+          <p>A economia dos negócios online gira US$ 46 bilhões por ano no Brasil, o que equivale a 2,2% do PIB (produto interno bruto), segundo uma pesquisa ...</p>
+          </article>
+          <article>
+          <h2><a href="#">Open data community to tell government what to publish‎</a></h2>
+          <p>The private sector and the broader open data community are to have a greater influence over the release of public sector data, ministers have said at the ...</p>
+          </article>
+        </section>
 
-        Find out more about working with open data by exploring 
-        these resources: 
-        <ul>
-          <li><a href="http://getthedata.org">GetTheData.org</a></li>
-          <li><a href="http://datapatterns.org">DataPatterns.org</a></li>
-          <li><a href="http://opendatamanual.org">Open Data Manual</a></li>
-        </ul>
-        </div>
-      </div>
-      <div py:if="c.groups" class="span-24 last whoelse">
-        <h2>Who else is here?</h2>
-      </div>
-      <py:for each="i, group_dict in enumerate(c.groups[:6])">
-        <div class="span-8 group ${'last' if i % 3 == 2 else ''}">
-          <h3><a href="${h.url_for(controller='group', action='read', id=group_dict['name'])}">${group_dict['title']}</a></h3>
+        <section id="new">
+          <article>
+          <span class="datanoticia">17/03/2012</span><h2><a href="#">Open data is the raw material of 'new industrial revolution'‎</a></h2>
+          <p>But what is the point of open data? Even those who applaud the commitment to transparency that progressively releasing this information demonstrates need to ...</p>
+          </article>
+          <article>
+          <span class="datanoticia">12/03/2012</span><h2><a href="#">Economia online gira US$ 46 bilhões no Brasil</a></h2>
+          <p>A economia dos negócios online gira US$ 46 bilhões por ano no Brasil, o que equivale a 2,2% do PIB (produto interno bruto), segundo uma pesquisa ...</p>
+          </article>
+          <article>
+          <span class="datanoticia">05/03/2012</span><h2><a href="#">Open data community to tell government what to publish‎</a></h2>
+          <p>The private sector and the broader open data community are to have a greater influence over the release of public sector data, ministers have said at the ...</p>
+          </article>
+        </section>
+
+        <section id="data_by_category">
+          <h1> Dados por etiqueta </h1>
           <p>
-            ${h.markdown_extract(group_dict['description'])}
-          </p>
-          <strong>${group_dict['title']} has ${group_dict['packages']} datasets.</strong>
+            <a href="#">Federal</a> (99)
+            <a href="#">Estadual</a> (92)
+            <a href="#">Municipal</a> (85)
+            <a href="#">Saúde</a> (78)
+            <a href="#">Servidores</a> (71)
+            <a href="#">Federal</a> (64)
+            <a href="#">Indústria</a> (57)
+            <a href="#">Educação</a> (50)
+            <a href="#">Censo</a> (43)
+            <a href="#">População</a> (36)
+            <a href="#">Crimes</a> (29)
+            <a href="#">Fornecedores</a> (22)
+            <a href="#">Aeroportos</a> (15)
+            <a href="#">Petróleo</a> (8)
+            <a href="#">Transparência</a> (1)
+           </p>
+        </section>
+        
+        <section id="top_apps">
+          <ul class="nav nav-tabs" id="top_apps_tabs">
+            <li class="active">
+              <a href="#acessados" data-toggle="tab">+ Acessados </a>
+            </li>
+            <li>
+              <a href="#recentes" data-toggle="tab">+ Recentes </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="acessados">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Organização</th>
+                      <th>Acessos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tr>
+                    <td><a href=#>Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>500</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>400</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>200</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>100</td>
+                  </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="recentes">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Organização</th>
+                      <th>Quando</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tr>
+                    <td><a href=#>Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>hoje</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>ontem</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>19/03/2012</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>18/03/2012</td>
+                  </tr>
+                  <tr>
+                    <td><a href=#>Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
+                    <td>Controladoria Geral da União</td>
+                    <td>17/03/2012</td>
+                  </tr>
+                </table>
+            </div>
         </div>
-      </py:for>
+
+        <script>
+          $(function () {
+            $('.nav-tabs a:first').tab('show')
+          })
+        </script>
+        </section>
+
+        <section id="apps">
+          <ul>
+            <div id="myCarousel" class="carousel">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item">
+                    <li>
+                      <img src="" alt="" />
+                      <h2> Aplicativo </h2>
+                      <p> 8-bit nulla before they sold out quinoa nostrud stumptown, williamsburg</p>
+                    </li>
+                    <li>
+                      <img src="" alt="" />
+                      <h2> Aplicativo </h2>
+                      <p>Ad fixie whatever tempor fap, godard beard typewriter tumblr gastropub kogi</p>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                      <img src="" alt="" />
+                      <h2> Aplicativo </h2>
+                      <p>Ad fixie whatever tempor fap, godard beard typewriter tumblr gastropub kogi</p>
+                    </li>
+                    <li>
+                      <img src="" alt="" />
+                      <h2> Aplicativo </h2>
+                      <p>Photo booth deserunt kale chips mustache occupy officia odio, biodiesel forage.</p>
+                    </li>
+                </div>
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+          </ul>
+        </section>
+
+      </div> <!-- div role main -->
+
+      <form action="${h.url_for(controller='package', action='search')}" method="GET"> 
+        <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" /> 
+      </form> 
+    
   </div>
   <xi:include href="layout.html" />
 </html>
