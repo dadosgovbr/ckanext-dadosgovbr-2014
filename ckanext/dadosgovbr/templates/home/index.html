@@ -5,7 +5,7 @@
   
   <py:def function="page_title">Welcome</py:def>
     <div py:match="//div[@id='content']" class="front-page">
-
+    <div id="container">
       <div role='main'>
 
         <form action="${h.url_for(controller='package', action='search')}" id="search" method="GET">
@@ -86,27 +86,27 @@
                   <tbody>
                   </tbody>
                   <tr>
-                    <td><a href=#>Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>500</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>400</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>300</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>200</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>100</td>
                   </tr>
@@ -125,27 +125,27 @@
                   <tbody>
                   </tbody>
                   <tr>
-                    <td><a href=#>Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>hoje</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>ontem</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>19/03/2012</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>18/03/2012</td>
                   </tr>
                   <tr>
-                    <td><a href=#>Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
                     <td>Controladoria Geral da União</td>
                     <td>17/03/2012</td>
                   </tr>
@@ -202,7 +202,7 @@
       <form action="${h.url_for(controller='package', action='search')}" method="GET"> 
         <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" /> 
       </form> 
-    
+  </div>
   </div>
   <xi:include href="layout.html" />
 </html>
