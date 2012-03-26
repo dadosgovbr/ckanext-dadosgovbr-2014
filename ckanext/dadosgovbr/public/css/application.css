@@ -1491,7 +1491,7 @@ body {
     margin: 0 auto;
     margin: -2px auto; }
 
-#container {
+#wrap {
   *zoom: 1;
   margin: 0 auto;
   width: 980px;
@@ -1499,20 +1499,20 @@ body {
   background: white;
   -moz-border-radius: 15px;
   border-radius: 15px; }
-  #container:before, #container:after {
+  #wrap:before, #wrap:after {
     display: table;
     content: ""; }
-  #container:after {
+  #wrap:after {
     clear: both; }
-  #container header {
+  #wrap header {
     *zoom: 1;
     margin-top: 20px; }
-    #container header:before, #container header:after {
+    #wrap header:before, #wrap header:after {
       display: table;
       content: ""; }
-    #container header:after {
+    #wrap header:after {
       clear: both; }
-    #container header #zoom {
+    #wrap header #zoom {
       float: left;
       margin-left: 20px;
       width: 60px;
@@ -1523,10 +1523,10 @@ body {
       padding: 5px;
       -moz-border-radius: 15px;
       border-radius: 15px; }
-      #container header #zoom a {
+      #wrap header #zoom a {
         text-decoration: none;
         color: #000; }
-    #container header h1 {
+    #wrap header h1 {
       float: left;
       margin-left: 20px;
       width: 220px;
@@ -1536,11 +1536,11 @@ body {
       background-image: url("../img/bg/logo3.png");
       background-repeat: no-repeat;
       overflow: hidden; }
-      #container header h1 a {
+      #wrap header h1 a {
         display: block;
         height: 146px;
         padding-top: 146px; }
-    #container header #news {
+    #wrap header #news {
       clear: both;
       float: left;
       margin-left: 20px;
@@ -1550,25 +1550,25 @@ body {
       height: 35px;
       margin-top: -35px;
       border: 1px solid red; }
-    #container header nav {
+    #wrap header nav {
       clear: both;
       margin-top: 20px;
       float: left;
       width: 100%; }
-      #container header nav ul.nav {
+      #wrap header nav ul.nav {
         float: left;
         margin-left: 20px;
         width: 700px;
         list-style: none; }
-        #container header nav ul.nav > li {
+        #wrap header nav ul.nav > li {
           float: left;
           *zoom: 1; }
-          #container header nav ul.nav > li:before, #container header nav ul.nav > li:after {
+          #wrap header nav ul.nav > li:before, #wrap header nav ul.nav > li:after {
             display: table;
             content: ""; }
-          #container header nav ul.nav > li:after {
+          #wrap header nav ul.nav > li:after {
             clear: both; }
-          #container header nav ul.nav > li > a {
+          #wrap header nav ul.nav > li > a {
             display: block;
             width: 100px;
             background: #42A0B7;
@@ -1577,7 +1577,7 @@ body {
             text-align: center;
             text-decoration: none;
             color: #FFF; }
-      #container header nav a#governo {
+      #wrap header nav a#governo {
         float: left;
         margin-left: 20px;
         width: 140px;
@@ -1590,7 +1590,7 @@ body {
         line-height: 21px;
         font-size: 120%;
         text-decoration: none; }
-        #container header nav a#governo:after {
+        #wrap header nav a#governo:after {
           position: relative;
           left: 10px;
           display: block;
@@ -1602,121 +1602,122 @@ body {
             border-left: 10px solid #FDD81F;
           text-decoration: none;
           background: #FF0; }
-  #container div[role='main'] {
+  #wrap div[role='main'] {
     *zoom: 1;
     margin-top: 30px; }
-    #container div[role='main']:before, #container div[role='main']:after {
+    #wrap div[role='main']:before, #wrap div[role='main']:after {
       display: table;
       content: ""; }
-    #container div[role='main']:after {
+    #wrap div[role='main']:after {
       clear: both; }
-    #container div[role='main'] section {
+    #wrap div[role='main'] section {
       background: #ECECEC;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      #container div[role='main'] section > :first-child {
+      #wrap div[role='main'] section > :first-child {
         margin-top: 12px; }
-        #container div[role='main'] section > :first-child li {
+        #wrap div[role='main'] section > :first-child li {
           margin-top: 0; }
-      #container div[role='main'] section .nav-tabs {
+      #wrap div[role='main'] section .nav-tabs {
         margin-top: 0;
         margin-bottom: 0; }
-        #container div[role='main'] section .nav-tabs a {
+        #wrap div[role='main'] section .nav-tabs a {
           margin-top: 0; }
-      #container div[role='main'] section h1, #container div[role='main'] section p, #container div[role='main'] section h2, #container div[role='main'] section span {
+      #wrap div[role='main'] section h1, #wrap div[role='main'] section p, #wrap div[role='main'] section h2, #wrap div[role='main'] section span {
         margin-left: 12px;
         margin-right: 12px; }
-      #container div[role='main'] section h1 {
+      #wrap div[role='main'] section h1 {
         font-size: 16px;
         line-height: 140%;
         margin-bottom: 1em; }
-      #container div[role='main'] section h2 {
+      #wrap div[role='main'] section h2 {
         font-size: 14px;
         line-height: 140%; }
-    #container div[role='main'] form#search, #container div[role='main'] #featureddata, #container div[role='main'] #top_apps {
+    #wrap div[role='main'] form#search, #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps {
       float: left;
       margin-left: 20px;
       width: 540px; }
-    #container div[role='main'] #new, #container div[role='main'] #data_by_category {
+    #wrap div[role='main'] #new, #wrap div[role='main'] #data_by_category {
       float: left;
       margin-left: 20px;
       width: 380px; }
-    #container div[role='main'] #featureddata, #container div[role='main'] #top_apps, #container div[role='main'] #data_by_category {
+    #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #data_by_category {
       margin-top: 20px;
       height: 248px; }
-    #container div[role='main'] form#search {
+    #wrap div[role='main'] form#search {
       height: 60px;
       margin-bottom: 0; }
-    #container div[role='main'] #busca {
+    #wrap div[role='main'] #busca {
       height: 50px;
       width: 466px;
       font-size: 23px;
       line-height: 40px; }
-    #container div[role='main'] #btnbusca {
+    #wrap div[role='main'] #btnbusca {
       height: 60px;
       width: 60px;
       background-image: url("../img/bg/busca.png");
       background-repeat: no-repeat; }
-    #container div[role='main'] #new {
+    #wrap div[role='main'] #new {
       height: 330px;
       margin-top: -60px; }
-      #container div[role='main'] #new p {
+      #wrap div[role='main'] #new p {
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray; }
-      #container div[role='main'] #new span {
+      #wrap div[role='main'] #new span {
         float: right;
         color: gray;
         margin-top: 1em; }
-    #container div[role='main'] #apps {
+    #wrap div[role='main'] #apps {
       margin-top: 20px;
       float: left;
       margin-left: 20px;
       width: 940px; }
-      #container div[role='main'] #apps ul {
+      #wrap div[role='main'] #apps ul {
         overflow: hidden;
         padding: 20px 30px;
         list-style: none;
         margin: 0;
         -moz-border-radius: 5px;
         border-radius: 5px; }
-        #container div[role='main'] #apps ul .carousel-inner {
+        #wrap div[role='main'] #apps ul .carousel-inner {
           margin-left: 136px; }
-        #container div[role='main'] #apps ul li {
+        #wrap div[role='main'] #apps ul li {
           float: left;
           margin-left: 20px;
           width: 300px;
           margin-top: 0px; }
-          #container div[role='main'] #apps ul li h2 {
+          #wrap div[role='main'] #apps ul li h2 {
             margin: 0;
               margin-top: 20px;
               margin-bottom: 10px;
             font-weight: 700; }
-          #container div[role='main'] #apps ul li img {
+          #wrap div[role='main'] #apps ul li img {
             width: 107px;
             height: 110px;
             float: left;
             margin-right: 10px;
             background: #3AAA35; }
-          #container div[role='main'] #apps ul li p {
+          #wrap div[role='main'] #apps ul li p {
             font-size: 13px;
             line-height: 18px;
             width: 148px;
             float: left;
             margin-left: 5px; }
-  #container footer {
-    margin-top: 50px;
-    padding: 15px 2px 25px;
-    *zoom: 1;
-    background: #EDEDED; }
-    #container footer:before, #container footer:after {
-      display: table;
-      content: ""; }
-    #container footer:after {
-      clear: both; }
-    #container footer div {
-      float: left;
-      margin-left: 20px;
-      width: 220px; }
-      #container footer div ul {
-        list-style: none;
-        margin: 0; }
+
+footer {
+  margin-top: 50px;
+  padding: 15px 2px 25px;
+  *zoom: 1;
+  background: #EDEDED; }
+  footer:before, footer:after {
+    display: table;
+    content: ""; }
+  footer:after {
+    clear: both; }
+  footer div {
+    float: left;
+    margin-left: 20px;
+    width: 220px; }
+    footer div ul {
+      list-style: none;
+      margin: 0; }
