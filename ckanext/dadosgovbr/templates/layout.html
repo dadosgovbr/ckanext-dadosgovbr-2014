@@ -5,13 +5,13 @@
   py:strip="">
   <head py:match="head">
     ${select('*')}
-    <link rel="stylesheet" href="${h.url_for('/css/application.css')}" type="text/css" media="screen" charset="utf-8"/>
-    <script src="${h.url_for('/scripts/jquery-1.7.1.js')}"></script>
-    <script src="${h.url_for('/scripts/bootstrap-dropdown.js')}"></script>
-    <script src="${h.url_for('/scripts/bootstrap-transition.js')}"></script>
-    <script src="${h.url_for('/scripts/bootstrap-carousel.js')}"></script>
-    <script src="${h.url_for('/scripts/bootstrap-tab.js')}"></script>
-    <script src="${h.url_for('/scripts/main.js')}"></script>
+    <link rel="stylesheet" href="${g.site_url + 'css/application.css'}" type="text/css" media="screen" charset="utf-8"/>
+    <script src="${g.site_url + 'scripts/jquery-1.7.1.js'}"></script>
+    <script src="${g.site_url + 'scripts/bootstrap-dropdown.js'}"></script>
+    <script src="${g.site_url + 'scripts/bootstrap-transition.js'}"></script>
+    <script src="${g.site_url + 'scripts/bootstrap-carousel.js'}"></script>
+    <script src="${g.site_url + 'scripts/bootstrap-tab.js'}"></script>
+    <script src="${g.site_url + 'scripts/main.js'}"></script>
   </head>
   <xi:include href="layout_base.html" />
 </html>
