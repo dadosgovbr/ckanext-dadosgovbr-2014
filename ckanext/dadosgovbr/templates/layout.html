@@ -13,13 +13,9 @@
     <script src="${g.site_url + 'scripts/bootstrap-tab.js'}"></script>
     <script src="${g.site_url + 'scripts/main.js'}"></script>
   </head>
-  <body py:match="body">
+  <body>
     <div id="brasil"><span></span></div>
     <div id="container">
-      $(select('*')}
-    </div>
-  </body>
-  <div py:match="//div[@class='header outer']">
     <header>
         <div id="zoom">
           <a href="#plus" onclick="resizeText(1)" >A+</a>
@@ -77,7 +73,93 @@
           </ul>
           <a href="/governo" id="governo"> Governo </a>
         </nav>
-      </header>
-  </div>
+    </header>
+    <div id="content">
+      Isto é a área de conteúdo.
+    </div>
+    <footer>
+    <div id="sitemap">
+      <h3> Mapa do site </h3>
+      <ul>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+        <li>
+          <a href=""> Dominio Publico </a>
+        </li>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+      </ul>
+    </div>
+    <div id="parceiros">
+      <h3> Parceiros </h3>
+      <ul>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+        <li>
+          <a href=""> Dominio Publico </a>
+        </li>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+      </ul>
+    </div>
+    <div id="code">
+      <h3> Código </h3>
+      <ul>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+        <li>
+          <a href=""> Dominio Publico </a>
+        </li>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+      </ul>
+    </div>
+    <div id="about">
+      <h3> Saiba mais </h3>
+      <ul>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+        <li>
+          <a href=""> Dominio Publico </a>
+        </li>
+        <li>
+          <a href=""> Governo Eletrônico </a>
+        </li>
+        <li>
+          <a href=""> Lei de acesso a informação </a>
+        </li>
+      </ul>
+    </div>
+    </footer>
+    </div>
+  </body>
   <xi:include href="layout_base.html" />
 </html>
