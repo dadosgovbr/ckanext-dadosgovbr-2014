@@ -1707,20 +1707,23 @@ body {
             float: left;
             margin-left: 5px; }
 
-.footer.outer footer {
-  margin-top: 50px;
-  padding: 15px 2px 25px;
-  *zoom: 1;
-  background: #EDEDED; }
-  .footer.outer footer:before, .footer.outer footer:after {
-    display: table;
-    content: ""; }
-  .footer.outer footer:after {
-    clear: both; }
-  .footer.outer footer div {
-    float: left;
-    margin-left: 20px;
-    width: 220px; }
-    .footer.outer footer div ul {
-      list-style: none;
-      margin: 0; }
+.footer.outer {
+  text-align: center;
+  width: 100%; }
+  .footer.outer footer {
+    margin: 50px auto 0;
+    padding: 15px 2px 25px;
+    *zoom: 1;
+    background: #EDEDED; }
+    .footer.outer footer:before, .footer.outer footer:after {
+      display: table;
+      content: ""; }
+    .footer.outer footer:after {
+      clear: both; }
+    .footer.outer footer div {
+      float: left;
+      margin-left: 20px;
+      width: 220px; }
+      .footer.outer footer div ul {
+        list-style: none;
+        margin: 0; }
