@@ -34,6 +34,3 @@ class DadosGovBrTheme(SingletonPlugin):
                 config.get('extra_public_paths', '')])
         config['extra_template_paths'] = ','.join([template_dir,
                 config.get('extra_template_paths', '')])
-
-        # Override the site title config setting.
-        config['ckan.site_title'] = "dados.gov.br"
