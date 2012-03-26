@@ -1709,12 +1709,14 @@ body {
 
 .footer.outer {
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  background: none;
+  border: none; }
   .footer.outer footer {
-    margin: 50px auto 0;
+    width: 980px;
+    margin: 50px auto;
     padding: 15px 2px 25px;
-    *zoom: 1;
-    background: #EDEDED; }
+    *zoom: 1; }
     .footer.outer footer:before, .footer.outer footer:after {
       display: table;
       content: ""; }
