@@ -13,10 +13,15 @@
     <script src="${g.site_url + 'scripts/bootstrap-tab.js'}"></script>
     <script src="${g.site_url + 'scripts/main.js'}"></script>
   </head>
-  <body>
+
+  <body py:match="body">
     <div id="brasil"><span></span></div>
     <div id="container">
-    <header>
+    ${select('*')}
+    </div>
+  </body>
+
+    <header py:match="//div[@class='header outer'">
         <div id="zoom">
           <a href="#plus" onclick="resizeText(1)" >A+</a>
           <a href="#less" onclick="resizeText(-1)">A-</a>
@@ -74,10 +79,8 @@
           <a href="/governo" id="governo"> Governo </a>
         </nav>
     </header>
-    <div id="content">
-      Isto é a área de conteúdo.
-    </div>
-    <footer>
+
+    <footer py:match="/div[@class='footer outer'">
     <div id="sitemap">
       <h3> Mapa do site </h3>
       <ul>
@@ -159,7 +162,6 @@
       </ul>
     </div>
     </footer>
-    </div>
-  </body>
+
   <xi:include href="layout_base.html" />
 </html>
