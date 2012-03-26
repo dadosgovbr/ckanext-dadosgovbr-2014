@@ -1,0 +1,315 @@
+@import "twitter_bootstrap/variables";
+@import "twitter_bootstrap/mixins";
+@import "twitter_bootstrap/reset";
+@import "twitter_bootstrap/scaffolding";
+@import "twitter_bootstrap/type";
+@import "twitter_bootstrap/forms";
+@import "twitter_bootstrap/dropdowns";
+@import "twitter_bootstrap/carousel";
+@import "twitter_bootstrap/navs";
+@import "twitter_bootstrap/tables";
+
+@import "grid";
+
+$sitewidth: 980px;
+$sectionmargin: 12px;
+
+body{
+  background-image: url(../img/bg/body-bg.jpg);
+  background-repeat-x: no-repeat;
+  background-repeat-y: repeat;
+  background-attachment: initial;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: white;
+  ul{
+    margin-left:0px;
+    margin-top:0px;
+  }
+}
+
+#brasil:after{
+  background-color: #006B0A;
+  border-bottom-color: #FFB400;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  content: " ";
+  display: block;
+  height: 1px;
+  text-align: center;
+  width: $sitewidth;
+}
+
+#brasil{
+  height: 28px;
+  /*background: #F1D800;*/
+  width: 100%;
+  text-align: center;
+  background-color: #7F7F7F;
+
+
+
+  span {
+    background-image: url("../img/bg/barra-brasil-v3-cinza.gif");
+    width: $sitewidth - 20;
+    background-position: right bottom;
+    height: 28px;
+    background-color: transparent;
+    display: block;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin: -2px auto;
+  }
+
+}
+
+#main{
+  width: $sitewidth;
+}
+
+#wrap{
+  @include container;
+  width: $sitewidth; // Fix it to responsive
+  max-width: $sitewidth;
+  background: white;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  header{
+    @include row();
+    margin-top: 20px;
+    #zoom{
+      @include column(1, true);
+      float: right;
+      background: #F1D800;
+      text-align: center;
+      padding: 5px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      a{
+        text-decoration: none;
+        color: #000;
+      }
+    }
+    h1{
+      @include column(3);
+      /*background: #EDD500;*/
+      $alturalogo: 146px;
+      height: $alturalogo;
+      width: 320px;
+      background-image: url("../img/bg/logo3.png");
+      background-repeat: no-repeat;
+      overflow: hidden;
+      a {
+        display: block;
+        height: $alturalogo;
+        padding-top: $alturalogo;
+      }
+    }
+    #news{
+      clear: both;
+      @include column(2+1/2, true);
+      float: right;
+      height: 35px;
+      margin-top: -35px;
+      border: 1px solid red;
+    }
+    nav{
+      clear: both;
+      margin-top: 20px;
+      float: left;
+      width: 100%;
+      ul.nav{
+        @include column(9);
+        list-style: none;
+        > li{
+          float: left;
+          @include clearfix();
+          > a{
+            display: block;
+            width: 100px;
+            background: #42A0B7;
+            padding: 3px 0;
+            margin-right: 3px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+          }
+        }
+      }
+      a#governo{
+        @include column(2, true);
+        width: 100px;
+        float: right;
+        text-align: center;
+        background: #FDD81F;
+        color: #EC561F;
+        line-height: 21px;
+        font-size: 120%;
+        text-decoration: none;
+        &:after{
+          position: relative;
+          left: 10px;
+          display: block;
+          float: right;
+          content: " ";
+          width: 1px;
+          height: 1px;
+          border: 10px solid #FFF {
+            left: 10px solid #FDD81F;
+          }
+          text-decoration: none;
+          background: #FF0;
+        }
+      }
+    }
+  }
+
+  div[role='main']{
+    @include row();
+    margin-top: 30px;
+
+    section{
+      background: #ECECEC;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      >:first-child{
+        margin-top: $sectionmargin;
+        li{
+          margin-top: 0;
+        }
+      }
+      .nav-tabs{
+        margin-top:0;
+        margin-bottom:0;
+        a{
+          margin-top:0;
+        }
+      }
+      h1, p, h2, span{
+        margin-left: $sectionmargin;
+        margin-right: $sectionmargin;
+      }
+      h1 {
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 1em;
+      }
+      h2{
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+    
+
+    form#search, #featureddata, #top_apps{
+      @include column(7);
+    }
+
+    #new, #data_by_category{
+      @include column(5);
+    }
+
+    #featureddata, #top_apps,  #data_by_category{
+      margin-top: 20px;
+      height: 248px;
+    }
+
+    form#search{
+      //background: #CCC;
+      height: 60px;
+      margin-bottom: 0;
+    }
+	
+	#busca{
+	  height: 50px;
+	  width: 460px;
+	  font-size: 23px;
+	  line-height: 40px;
+	}
+
+	#btnbusca{
+	   height: 60px;
+	   width: 60px;
+	   background-image: url("../img/bg/busca.png");
+       background-repeat: no-repeat;
+	}
+	
+    #new{
+      height: 330px;
+      margin-top: -60px;
+      p{
+        padding-bottom: 4px;
+        border-bottom: 1px solid darkgray;
+      }
+      span{
+        float:right;
+        color:gray;
+        margin-top: 1em;
+      }
+    }
+    #apps{
+      margin-top: 20px;
+      @include column(12);
+      ul{
+        overflow: hidden;
+        padding: 20px 30px;
+        list-style: none;
+        margin: 0;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        .carousel-inner {
+            margin-left: 136px;
+        }
+        li{
+          @include column(4);
+          margin-top: 0px;
+          h2{
+            margin: 0 {
+              top: 20px;
+              bottom: 10px;
+            }
+            font-weight: 700;
+          }
+          img{
+            width: 107px;
+            height: 110px;
+            float: left;
+            margin-right: 10px;
+            background: #3AAA35;
+          }
+
+          p{
+            font-size: 13px;
+            line-height: 18px;
+            width: 148px;
+            float: left;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer.outer {
+    text-align: center;
+    width: 100%;
+    background: none;
+    border: none;
+    footer{
+        width: $sitewidth;
+        margin: 50px auto;
+        padding: 15px 2px 25px ;
+        @include clearfix;
+        div{
+          @include column(3);
+          ul{
+            list-style: none;
+            margin: 0;
+          }
+        }
+      }
+}
