@@ -1454,8 +1454,7 @@ body {
   background-repeat-x: no-repeat;
   background-repeat-y: repeat;
   background-attachment: initial;
-  background-position-x: 50%;
-  background-position-y: 0%;
+  background-position: bottom center;
   background-origin: initial;
   background-clip: initial;
   background-color: white; }
