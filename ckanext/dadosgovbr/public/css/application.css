@@ -1607,7 +1607,7 @@ body {
           background: #FF0; }
   #wrap div[role='main'] {
     *zoom: 1;
-    margin-top: 30px; }
+    margin-top: 15px; }
     #wrap div[role='main']:before, #wrap div[role='main']:after {
       display: table;
       content: ""; }
