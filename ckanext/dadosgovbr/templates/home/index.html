@@ -30,10 +30,11 @@
 
         <section id="new">
           <py:for each="link, title, description in c.articles">
-          <article>
-          <span class="datanoticia">17/03/2012</span><h2><a href="${c.link}">${c.title}</a></h2>
-          <p>${c.description}</p>
-          </article>
+              <article>
+              <span class="datanoticia">17/03/2012</span><h2><a href="${c.link}">${c.title}</a></h2>
+              <p>${c.description}</p>
+              </article>
+          </py:for>
         </section>
 
         <section id="data_by_category">
