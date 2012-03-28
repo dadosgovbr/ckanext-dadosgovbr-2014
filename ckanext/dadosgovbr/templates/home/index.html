@@ -39,11 +39,11 @@
 
         <section id="data_by_category">
           <h1> Dados por etiqueta </h1>
-          <p>
+          <ul class="tags clearfix">
            <py:for each="link, tag, count in c.top_tags">
-            <a href="${link}">${tag}</a> (${count})
+            <li><a href="${link}">${tag}</a></li> x ${count}
            </py:for>
-          </p>
+          </ul>
         </section>
         
         <section id="top_apps">
