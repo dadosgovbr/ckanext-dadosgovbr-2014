@@ -1646,9 +1646,9 @@ body {
     #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
       margin-top: 20px;
       height: 248px; }
-    #wrap div[role='main'] #top_tags .tags ul {
+    #wrap div[role='main'] #top_tags .tags {
       margin-left: 1em; }
-      #wrap div[role='main'] #top_tags .tags ul li {
+      #wrap div[role='main'] #top_tags .tags li {
         border: none;
         display: inline-block;
         font-weight: normal;
