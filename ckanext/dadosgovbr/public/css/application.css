@@ -1653,7 +1653,7 @@ body {
         display: inline-block;
         font-weight: normal;
         list-style-type: none;
-        padding: 0 5px 2px; }
+        padding: 0 3px 2px; }
     #wrap div[role='main'] form#search {
       height: 60px;
       margin-bottom: 0; }
