@@ -64,7 +64,7 @@ class DadosGovBrHomeController(HomeController):
                 result['name'],
                 len(result['packages'])
             ) for result in results ]
-        c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)
+        c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)[:tag_limit]
     
     def index(self):
         """This handles dados.gov.br's index home page.
