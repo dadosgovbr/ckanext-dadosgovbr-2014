@@ -9,7 +9,7 @@ class DadosGovBrHomeController(HomeController):
     @staticmethod
     def limita_tamanho(s, tamanho):
         s = unicode(s)
-        return s if (len(s) < tamanho) else s[:(tamanho - 5)].rsplit(u" ", 1)[0] + u" &hellip;"
+        return s if (len(s) < tamanho) else s[:(tamanho - 5)].rsplit(u" ", 1)[0] + u" ..."
     @staticmethod
     def formata_data(d):
         return d.strftime("%d/%m/%Y")
