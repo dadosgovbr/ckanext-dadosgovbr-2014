@@ -1647,10 +1647,8 @@ body {
       margin-top: 20px;
       height: 248px; }
     #wrap div[role='main'] #top_tags .tags li {
-      background: #AFC6E9;
       border: none;
       display: inline-block;
-      font-size: 0.8em;
       font-weight: normal;
       list-style-type: none;
       margin-right: 6px;
