@@ -65,7 +65,19 @@ class DadosGovBrHomeController(HomeController):
                 len(result['packages'])
             ) for result in results ]
         c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)[:tag_limit]
-    
+
+    @staticmethod
+    def set_featured_datasets():
+        """Sets the c.featured_datasets variable for a template to render.
+        """
+        from ckan.logic import get_action
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author}
+        
+        data_dict = {'id': 'dados-em-destaque'}
+        results = get_action('group_package_show')(context,data_dict)
+        c.featured_datasets = results
+
     def index(self):
         """This handles dados.gov.br's index home page.
         All extra data displayed on the home page should be handled here.
@@ -74,6 +86,7 @@ class DadosGovBrHomeController(HomeController):
         self.set_news_section()
 
         # featured datasets section, read from a specific dataset group
+        self.set_featured_datasets()
 
         # most recent datasets section
         

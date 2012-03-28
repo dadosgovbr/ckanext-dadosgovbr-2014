@@ -14,7 +14,7 @@
         </form>
         <section id="featureddata">
           <h1> Dados em destaque </h1>
-          <article>
+          <!--<article>
           <h2><a href="#">Open data is the raw material of 'new industrial revolution'‎</a></h2>
           <p>But what is the point of open data? Even those who applaud the commitment to transparency that progressively releasing this information demonstrates need to ...</p>
           </article>
@@ -25,7 +25,10 @@
           <article>
           <h2><a href="#">Open data community to tell government what to publish‎</a></h2>
           <p>The private sector and the broader open data community are to have a greater influence over the release of public sector data, ministers have said at the ...</p>
-          </article>
+          </article>-->
+        <py:for each="dataset in c.featured_datasets">
+            ${dataset}
+        </py:for>
         </section>
 
         <section id="new">
