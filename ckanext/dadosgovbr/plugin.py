@@ -39,6 +39,6 @@ class DadosGovBrTheme(SingletonPlugin):
     def after_map(self, map):
         # map.redirect("/analytics/package/top", "/analytics/dataset/top")
         map.connect('home', '/',
-                    controller='ckanext.dadosgovbr.controllers:DadosGovBrHomeController',
+                    controller='ckanext.dadosgovbr.controllers.home:DadosGovBrHomeController',
                     action='index')
         return map
