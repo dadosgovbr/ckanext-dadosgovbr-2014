@@ -41,7 +41,7 @@
           <h1> Dados por etiqueta </h1>
           <ul class="tags clearfix">
            <py:for each="link, tag, count in c.top_tags">
-            <li><a href="${link}">${tag}</a></li> x ${count}
+            <li><a href="${link}">${tag}</a> (${count})</li>
            </py:for>
           </ul>
         </section>
