@@ -1,4 +1,4 @@
-from ckan.lib.base import c, h
+from ckan.lib.base import c, h, model
 from ckan.controllers.home import HomeController
 
 class DadosGovBrHomeController(HomeController):
@@ -49,6 +49,9 @@ class DadosGovBrHomeController(HomeController):
         from ckan.logic import get_action
         
         tag_limit = 40
+        
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author}
         
         data_dict = {}        
         data_dict['limit'] = tag_limit
