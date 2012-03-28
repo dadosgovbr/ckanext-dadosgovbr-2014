@@ -22,6 +22,8 @@ setup(
 	install_requires=[
 		# -*- Extra requirements: -*-
         'feedreader',
+        # dateutil version 2.0 is incompatible with feedreader
+        'python-dateutil==1.4.1',
 	],
 	entry_points=\
 	"""
