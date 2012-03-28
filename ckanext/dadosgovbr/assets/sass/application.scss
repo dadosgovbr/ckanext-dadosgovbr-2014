@@ -216,15 +216,17 @@ body{
       height: 248px;
     }
     
-    #top_tags .tags li {
-        //background: #AFC6E9;
-        border: none;
-        display: inline-block;
-        font-weight: normal;
-        list-style-type: none;
-        margin-right: 6px;
-        padding: 0 5px 2px;
+    #top_tags .tags ul {
+        margin-left: 1em;
+        li {
+            //background: #AFC6E9;
+            border: none;
+            display: inline-block;
+            font-weight: normal;
+            list-style-type: none;
+            padding: 0 5px 2px;
         }
+    }
     
     form#search{
       //background: #CCC;

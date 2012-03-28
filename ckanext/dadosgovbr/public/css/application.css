@@ -1646,13 +1646,14 @@ body {
     #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
       margin-top: 20px;
       height: 248px; }
-    #wrap div[role='main'] #top_tags .tags li {
-      border: none;
-      display: inline-block;
-      font-weight: normal;
-      list-style-type: none;
-      margin-right: 6px;
-      padding: 0 5px 2px; }
+    #wrap div[role='main'] #top_tags .tags ul {
+      margin-left: 1em; }
+      #wrap div[role='main'] #top_tags .tags ul li {
+        border: none;
+        display: inline-block;
+        font-weight: normal;
+        list-style-type: none;
+        padding: 0 5px 2px; }
     #wrap div[role='main'] form#search {
       height: 60px;
       margin-bottom: 0; }
