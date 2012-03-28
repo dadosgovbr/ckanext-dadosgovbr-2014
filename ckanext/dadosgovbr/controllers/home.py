@@ -60,7 +60,7 @@ class DadosGovBrHomeController(HomeController):
         results = get_action('tag_list')(context,data_dict)
         tags = [
             (
-                g.site_url+'/tag/'+result['name'],
+                g.site_url+'tag/'+result['name'],
                 result['name'],
                 len(result['packages'])
             ) for result in results ]
@@ -83,7 +83,7 @@ class DadosGovBrHomeController(HomeController):
         results = results[:3]
         c.featured_datasets = [
             (
-                g.site_url+'/dataset/'+result['name'],
+                g.site_url+'dataset/'+result['name'],
                 cls.limita_tamanho(result['title'],55),
                 cls.limita_tamanho(result['notes'],155),
             )
