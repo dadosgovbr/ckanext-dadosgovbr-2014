@@ -55,11 +55,16 @@ class DadosGovBrHomeController(HomeController):
         
         data_dict = {
             'all_fields': True,
-            'limit': tag_limit,
             'return_objects': True,
         }
         results = get_action('tag_list')(context,data_dict)
-        c.top_tags = results
+        tags = [
+            (
+                g.site_url+'/tag/'+result['name'],
+                result['name'],
+                len(result['packages'])
+            ) for result in results ]
+        c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)
     
     def index(self):
         """This handles dados.gov.br's index home page.

@@ -40,8 +40,8 @@
         <section id="data_by_category">
           <h1> Dados por etiqueta </h1>
           <p>
-           <py:for each="tag in c.top_tags">
-            <a href="${g.site_url+'/tag/'+tag['name']}">${tag['name']}</a>
+           <py:for each="link, tag, count in c.top_tags">
+            <a href="${link}">${tag}</a> (${count})
            </py:for>
           </p>
         </section>
