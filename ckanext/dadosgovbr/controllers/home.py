@@ -66,8 +66,8 @@ class DadosGovBrHomeController(HomeController):
             ) for result in results ]
         c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)[:tag_limit]
 
-    @staticmethod
-    def set_featured_datasets():
+    @classmethod
+    def set_featured_datasets(cls):
         """Sets the c.featured_datasets variable for a template to render.
         """
         from ckan.logic import get_action
@@ -76,7 +76,13 @@ class DadosGovBrHomeController(HomeController):
         
         data_dict = {'id': 'dados-em-destaque'}
         results = get_action('group_package_show')(context,data_dict)
-        c.featured_datasets = results
+        c.featured_datasets = [
+            (
+                g.site_url+'/dataset/'+result['name'],
+                cls.limita_tamanho(result['title'],55),
+                cls.limita_tamanho(result['notes'],155),
+            )
+            for result in results]
 
     def index(self):
         """This handles dados.gov.br's index home page.

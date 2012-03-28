@@ -26,8 +26,11 @@
           <h2><a href="#">Open data community to tell government what to publish‎</a></h2>
           <p>The private sector and the broader open data community are to have a greater influence over the release of public sector data, ministers have said at the ...</p>
           </article>-->
-        <py:for each="dataset in c.featured_datasets">
-            ${dataset}
+        <py:for each="link, title, notes in c.featured_datasets">
+          <article>
+          <h2><a href="${link}">${title}‎</a></h2>
+          <p>${notes}</p>
+          </article>
         </py:for>
         </section>
 
