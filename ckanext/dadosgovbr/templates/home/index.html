@@ -29,9 +29,9 @@
         </section>
 
         <section id="new">
-          <py:for each="link, title, description in c.articles">
+          <py:for each="link, published_date, title, description in c.articles">
               <article>
-              <span class="datanoticia">17/03/2012</span><h2><a href="${link}">${title}</a></h2>
+              <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
               <p>${description}</p>
               </article>
           </py:for>

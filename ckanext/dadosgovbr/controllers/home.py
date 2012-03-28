@@ -10,6 +10,9 @@ class DadosGovBrHomeController(HomeController):
     def limita_tamanho(s, tamanho):
         s = unicode(s)
         return s if (len(s) < tamanho) else s[:(tamanho - 5)].rsplit(u" ", 1)[0] + u" &hellip;"
+    @staticmethod
+    def formata_data(d):
+        return d.strftime("%d/%m/%Y")
     
     def index(self):
         """This handles dados.gov.br's index home page.
@@ -21,7 +24,12 @@ class DadosGovBrHomeController(HomeController):
         parsed = from_url('http://189.9.137.65/wp/index.php/feed')
         c.articles = []
         for entry in parsed.entries:
-            c.articles.append((entry.link, self.limita_tamanho(entry.title, 70), self.limita_tamanho(entry.description, 165))
+            c.articles.append((
+                entry.link,
+                self.formata_data(entry.published),
+                self.limita_tamanho(entry.title, 70),
+                self.limita_tamanho(entry.description, 165)
+            )
         
         # most recent datasets section
         
