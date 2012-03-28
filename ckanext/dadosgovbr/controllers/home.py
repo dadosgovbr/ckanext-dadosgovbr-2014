@@ -27,11 +27,18 @@ class DadosGovBrHomeController(HomeController):
                 cls.limita_tamanho(entry.description, 165)
             ))
 
-    @staticmethod
-    def set_most_viewed_datasets():
+    @classmethod
+    def set_most_viewed_datasets(cls):
         from ckanext.googleanalytics import dbutil
-        c.top_packages = dbutil.get_top_packages(limit=5)
-        
+        tamanho = 58
+        c.top_packages = []
+        for package, recent, ever in dbutil.get_top_packages(limit=5):
+            if getattr(package, "title", False):
+                package.title = cls.limita_tamanho(package.title, tamanho)
+            if getattr(package, "name", False):
+                package.name = cls.limita_tamanho(package.title, tamanho)
+            c.top_packages.append((package, recent, ever))
+
         # Enable to set resources variable, don't forget to enable it on template too!
         #c.top_resources = dbutil.get_top_resources(limit=10)
 
