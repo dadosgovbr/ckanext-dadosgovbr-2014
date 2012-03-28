@@ -28,6 +28,7 @@ setup(
 	entry_points=\
 	"""
         [ckan.plugins]
-        dadosgovbr_theme=ckanext.dadosgovbr.plugin:DadosGovBrTheme
+        dadosgovbr_theme=ckanext.dadosgovbr.theme:DadosGovBrTheme
+        dadosgovbr_feedreader=ckanext.dadosgovbr.feedreader:DadosGovBrFeedReader
 	""",
 )
