@@ -207,15 +207,26 @@ body{
       @include column(7);
     }
 
-    #new, #data_by_category{
+    #new, #top_tags{
       @include column(5);
     }
 
-    #featureddata, #top_apps,  #data_by_category{
+    #featureddata, #top_apps,  #top_tags{
       margin-top: 20px;
       height: 248px;
     }
-
+    
+    #top_tags .tags li {
+        background: #AFC6E9;
+        border: none;
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: normal;
+        list-style-type: none;
+        margin-right: 6px;
+        padding: 0 5px 2px;
+        }
+    
     form#search{
       //background: #CCC;
       height: 60px;
