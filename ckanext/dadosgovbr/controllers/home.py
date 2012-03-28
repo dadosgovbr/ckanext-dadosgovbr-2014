@@ -71,11 +71,13 @@ class DadosGovBrHomeController(HomeController):
         """Sets the c.featured_datasets variable for a template to render.
         """
         from ckan.logic import get_action
+        from random import shuffle
+
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
         
         data_dict = {'id': 'dados-em-destaque'}
-        results = get_action('group_package_show')(context,data_dict)
+        results = shuffle(get_action('group_package_show')(context,data_dict))[:3]
         c.featured_datasets = [
             (
                 g.site_url+'/dataset/'+result['name'],
