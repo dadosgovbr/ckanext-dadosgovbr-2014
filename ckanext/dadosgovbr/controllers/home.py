@@ -94,6 +94,7 @@ class DadosGovBrHomeController(HomeController):
         """Sets the c.most_recent_datasets variable for a template to render.
         """
         import ckan.lib.dictization as d
+        from ckan.logic import get_action
 
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}        
@@ -137,4 +138,6 @@ class DadosGovBrHomeController(HomeController):
 
         # top tags section
         self.set_top_tags()
+
         return super(DadosGovBrHomeController, self).index()
+
