@@ -23,7 +23,7 @@ class DadosGovBrHomeController(HomeController):
         # news section, parsed from feed
         parsed = from_url('http://189.9.137.65/wp/index.php/feed')
         c.articles = []
-        for entry in parsed.entries:
+        for entry in parsed.entries[:3]:
             c.articles.append((
                 entry.link,
                 self.formata_data(entry.published),
