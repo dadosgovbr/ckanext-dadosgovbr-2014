@@ -21,7 +21,7 @@ class DadosGovBrHomeController(HomeController):
         parsed = from_url('http://189.9.137.65/wp/index.php/feed')
         c.articles = []
         for entry in parsed.entries:
-            c.articles += (entry.link, limita_tamanho(entry.title, 70), limita_tamanho(entry.description, 165))
+            c.articles += (entry.link, limita_tamanho(entry.title, 70), self.limita_tamanho(entry.description, 165))
         
         # most recent datasets section
         

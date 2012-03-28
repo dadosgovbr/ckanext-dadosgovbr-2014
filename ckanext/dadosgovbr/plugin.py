@@ -36,7 +36,7 @@ class DadosGovBrTheme(SingletonPlugin):
         config['extra_template_paths'] = ','.join([template_dir,
                 config.get('extra_template_paths', '')])
 
-    def after_map(self, map):
+    def before_map(self, map):
         # map.redirect("/analytics/package/top", "/analytics/dataset/top")
         map.connect('home', '/',
                     controller='ckanext.dadosgovbr.controllers.home:DadosGovBrHomeController',
