@@ -29,6 +29,6 @@ setup(
 	"""
         [ckan.plugins]
         dadosgovbr_theme=ckanext.dadosgovbr.theme:DadosGovBrTheme
-        dadosgovbr_feedreader=ckanext.dadosgovbr.feedreader:DadosGovBrFeedReader
+        dadosgovbr_feedreader=ckanext.dadosgovbr.newssection:DadosGovBrNewsSection
 	""",
 )
