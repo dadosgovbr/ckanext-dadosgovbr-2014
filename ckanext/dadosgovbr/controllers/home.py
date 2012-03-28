@@ -29,7 +29,7 @@ class DadosGovBrHomeController(HomeController):
                 self.formata_data(entry.published),
                 self.limita_tamanho(entry.title, 70),
                 self.limita_tamanho(entry.description, 165)
-            )
+            ))
         
         # most recent datasets section
         
