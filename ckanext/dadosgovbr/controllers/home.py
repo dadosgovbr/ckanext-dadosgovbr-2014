@@ -27,4 +27,4 @@ class DadosGovBrHomeController(HomeController):
         
         # most viewed datasets section, from ckanext-googleanalytics
         
-        return super(DadosGovBrHomeController).index()
+        return super(self, DadosGovBrHomeController).index()
