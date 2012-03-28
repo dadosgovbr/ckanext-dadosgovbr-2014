@@ -90,7 +90,7 @@ class DadosGovBrHomeController(HomeController):
             for result in results]
 
     @classmethod
-    def set_most_recent_datasets(cls)
+    def set_most_recent_datasets(cls):
         """Sets the c.most_recent_datasets variable for a template to render.
         """
         import ckan.lib.dictization as d
