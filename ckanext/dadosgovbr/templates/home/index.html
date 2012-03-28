@@ -75,37 +75,45 @@
                   <thead>
                     <tr>
                       <th>Conjunto de dados</th>
-                      <th>Organização</th>
+                      <th>Acessos recentes</th>
                       <th>Acessos</th>
                     </tr>
                   </thead>
                   <tbody>
+                   <py:for each="package, recent, ever in c.top_packages">
+                      <tr>
+                        <td>${h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name))}
+                        </td>
+                        <td>${recent}</td>
+                        <td>${ever}</td>
+                      </tr>
+                   </py:for>
                   </tbody>
-                  <tr>
-                    <td><a href="#">Servidores do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                 <!-- <tr>
+                    <td><a href="#">Servidores do poder executivo federal</a></td>
                     <td>Controladoria Geral da União</td>
                     <td>500</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Convênis do poder executivo federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Convênis do poder executivo federal</a></td>
                     <td>Controladoria Geral da União</td>
                     <td>400</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Cadastro Nacional de Empresas Inidôneas...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Cadastro Nacional de Empresas Inidôneas...</a></td>
                     <td>Controladoria Geral da União</td>
                     <td>300</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Informações Legislativas da Câmara dos...</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Informações Legislativas da Câmara dos...</a></td>
                     <td>Controladoria Geral da União</td>
                     <td>200</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Fornecedores do Executivo Federal</a></td><!-- limitar a 45 caracteres-->
+                    <td><a href="#">Fornecedores do Executivo Federal</a></td>
                     <td>Controladoria Geral da União</td>
                     <td>100</td>
-                  </tr>
+                  </tr> -->
                 </table>
             </div>
 

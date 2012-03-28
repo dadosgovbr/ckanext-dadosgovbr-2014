@@ -1,7 +1,7 @@
 from ckan.lib.base import c, h
 from ckan.controllers.home import HomeController
 
-from feedreader.parser import from_url
+
 
 class DadosGovBrHomeController(HomeController):
     """dados.gov.br theme customized home controller
@@ -13,26 +13,41 @@ class DadosGovBrHomeController(HomeController):
     @staticmethod
     def formata_data(d):
         return d.strftime("%d/%m/%Y")
-    
-    def index(self):
-        """This handles dados.gov.br's index home page.
-        All extra data displayed on the home page should be handled here.
-        """
-        # featured datasets section, read from a specific dataset group
-        
-        # news section, parsed from feed
+
+    @classmethod
+    def set_news_section(cls):
+        from feedreader.parser import from_url
         parsed = from_url('http://189.9.137.65/wp/index.php/feed')
         c.articles = []
         for entry in parsed.entries[:3]:
             c.articles.append((
                 entry.link,
-                self.formata_data(entry.published),
-                self.limita_tamanho(entry.title, 70),
-                self.limita_tamanho(entry.description, 165)
+                cls.formata_data(entry.published),
+                cls.limita_tamanho(entry.title, 70),
+                cls.limita_tamanho(entry.description, 165)
             ))
+
+    @staticmethod
+    def set_most_viewed_datasets():
+        from ckanext.googleanalytics import dbutil
+        c.top_packages = dbutil.get_top_packages(limit=5)
         
+        # Enable to set resources variable, don't forget to enable it on template too!
+        #c.top_resources = dbutil.get_top_resources(limit=10)
+
+    def index(self):
+        """This handles dados.gov.br's index home page.
+        All extra data displayed on the home page should be handled here.
+        """
+        # news section, parsed from feed
+        self.set_news_section()
+
+        # featured datasets section, read from a specific dataset group
+
         # most recent datasets section
         
         # most viewed datasets section, from ckanext-googleanalytics
-        
+        self.set_most_viewed_datasets()
+
+
         return super(DadosGovBrHomeController, self).index()
