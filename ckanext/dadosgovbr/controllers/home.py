@@ -95,6 +95,7 @@ class DadosGovBrHomeController(HomeController):
         """
         import ckan.lib.dictization as d
         from ckan.logic import get_action
+        from sqlalchemy import desc
 
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
