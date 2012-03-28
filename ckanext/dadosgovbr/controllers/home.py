@@ -1,4 +1,4 @@
-from ckan.lib.base import c, h, model
+from ckan.lib.base import c, g, h, model
 from ckan.controllers.home import HomeController
 
 class DadosGovBrHomeController(HomeController):
