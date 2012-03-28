@@ -43,25 +43,8 @@
           <h1> Dados por etiqueta </h1>
           <p>
            <py:for each="tag in c.top_tags">
-            <a href="#">${tag}</a>
+            <a href="${g.site_url+'/tag/'+tag['name']}">${tag['name']}</a>
            </py:for>
-          <!--
-            <a href="#">Federal</a> (99)
-            <a href="#">Estadual</a> (92)
-            <a href="#">Municipal</a> (85)
-            <a href="#">Saúde</a> (78)
-            <a href="#">Servidores</a> (71)
-            <a href="#">Federal</a> (64)
-            <a href="#">Indústria</a> (57)
-            <a href="#">Educação</a> (50)
-            <a href="#">Censo</a> (43)
-            <a href="#">População</a> (36)
-            <a href="#">Crimes</a> (29)
-            <a href="#">Fornecedores</a> (22)
-            <a href="#">Aeroportos</a> (15)
-            <a href="#">Petróleo</a> (8)
-            <a href="#">Transparência</a> (1)
-           -->
           </p>
         </section>
         

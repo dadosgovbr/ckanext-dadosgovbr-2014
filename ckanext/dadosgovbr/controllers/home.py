@@ -48,14 +48,16 @@ class DadosGovBrHomeController(HomeController):
         """
         from ckan.logic import get_action
         
-        tag_limit = 40
+        tag_limit = 30
         
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
         
-        data_dict = {}        
-        data_dict['limit'] = tag_limit
-        data_dict['return_objects'] = True
+        data_dict = {
+            'all_fields': True,
+            'limit': tag_limit,
+            'return_objects': True,
+        }
         results = get_action('tag_list')(context,data_dict)
         c.top_tags = results
     
