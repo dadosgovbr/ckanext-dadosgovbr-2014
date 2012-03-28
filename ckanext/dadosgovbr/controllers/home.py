@@ -72,12 +72,15 @@ class DadosGovBrHomeController(HomeController):
         """
         from ckan.logic import get_action
         from random import shuffle
+        from copy import deepcopy
 
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
         
         data_dict = {'id': 'dados-em-destaque'}
-        results = shuffle(get_action('group_package_show')(context,data_dict))[:3]
+        results = deepcopy(get_action('group_package_show')(context,data_dict))
+        shuffle(results)
+        results = results[:3]
         c.featured_datasets = [
             (
                 g.site_url+'/dataset/'+result['name'],
