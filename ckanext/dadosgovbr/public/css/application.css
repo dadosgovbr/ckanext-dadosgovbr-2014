@@ -1639,13 +1639,22 @@ body {
       float: left;
       margin-left: 20px;
       width: 540px; }
-    #wrap div[role='main'] #new, #wrap div[role='main'] #data_by_category {
+    #wrap div[role='main'] #new, #wrap div[role='main'] #top_tags {
       float: left;
       margin-left: 20px;
       width: 380px; }
-    #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #data_by_category {
+    #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
       margin-top: 20px;
       height: 248px; }
+    #wrap div[role='main'] #top_tags .tags li {
+      background: #AFC6E9;
+      border: none;
+      display: inline-block;
+      font-size: 0.8em;
+      font-weight: normal;
+      list-style-type: none;
+      margin-right: 6px;
+      padding: 0 5px 2px; }
     #wrap div[role='main'] form#search {
       height: 60px;
       margin-bottom: 0; }
