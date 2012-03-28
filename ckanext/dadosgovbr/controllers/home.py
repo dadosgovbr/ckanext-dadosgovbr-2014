@@ -89,6 +89,36 @@ class DadosGovBrHomeController(HomeController):
             )
             for result in results]
 
+    @classmethod
+    set_most_recent_datasets(cls)
+        """Sets the c.most_recent_datasets variable for a template to render.
+        """
+        import ckan.lib.dictization as d
+
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author}        
+        model = context['model']
+        query = model.Session.query(model.Package)
+        query = query.join(model.Activity, model.Activity.object_id==model.Package.id)
+        query = query.filter(model.Activity.activity_type == 'new package')
+        query = query.filter(model.Package.state == 'active')
+        query = query.order_by(desc(model.Activity.timestamp))
+        query = query.limit(5)
+        most_recent_from_bd = query.all()
+
+        #Query:
+        #select act.activity_type, act.timestamp, pck.name
+        #from activity act
+        #join package pck on pck.id = act.object_id
+        #where act.activity_type = 'new package' and pck.state = 'active' order by act.timestamp desc;
+        
+        #Trace of how i got to the final line =p
+        #model_dictize.package_dictize
+        #obj_list_dictize
+        #recent_dict = model_dictize.package_dictize(most_recent_from_bd, context)
+
+        c.most_recent_datasets = d.obj_list_dictize(most_recent_from_bd, context)
+
     def index(self):
         """This handles dados.gov.br's index home page.
         All extra data displayed on the home page should be handled here.
@@ -100,6 +130,7 @@ class DadosGovBrHomeController(HomeController):
         self.set_featured_datasets()
 
         # most recent datasets section
+        self.set_most_recent_datasets()
         
         # most viewed datasets section, from ckanext-googleanalytics
         self.set_most_viewed_datasets()
