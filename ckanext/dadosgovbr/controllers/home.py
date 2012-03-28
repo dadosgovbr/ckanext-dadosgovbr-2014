@@ -84,7 +84,7 @@ class DadosGovBrHomeController(HomeController):
         c.featured_datasets = [
             (
                 g.site_url+'dataset/'+result['name'],
-                cls.limita_tamanho(result['title'],75),
+                cls.limita_tamanho(result['title'],70),
                 cls.limita_tamanho(result['notes'],155),
             )
             for result in results]
