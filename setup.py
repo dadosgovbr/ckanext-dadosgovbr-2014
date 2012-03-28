@@ -21,6 +21,7 @@ setup(
 	zip_safe=False,
 	install_requires=[
 		# -*- Extra requirements: -*-
+        'feedreader',
 	],
 	entry_points=\
 	"""
