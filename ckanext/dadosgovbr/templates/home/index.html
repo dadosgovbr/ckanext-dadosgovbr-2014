@@ -42,6 +42,10 @@
         <section id="data_by_category">
           <h1> Dados por etiqueta </h1>
           <p>
+           <py:for each="tag in c.top_tags">
+            <a href="#">${tag}</a>
+           </py:for>
+          <!--
             <a href="#">Federal</a> (99)
             <a href="#">Estadual</a> (92)
             <a href="#">Municipal</a> (85)
@@ -57,7 +61,8 @@
             <a href="#">Aeroportos</a> (15)
             <a href="#">Petróleo</a> (8)
             <a href="#">Transparência</a> (1)
-           </p>
+           -->
+          </p>
         </section>
         
         <section id="top_apps">
