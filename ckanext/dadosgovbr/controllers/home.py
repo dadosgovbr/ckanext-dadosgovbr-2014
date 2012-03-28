@@ -48,7 +48,7 @@ class DadosGovBrHomeController(HomeController):
         """
         from ckan.logic import get_action
         
-        tag_limit = 30
+        tag_limit = 28
         
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
