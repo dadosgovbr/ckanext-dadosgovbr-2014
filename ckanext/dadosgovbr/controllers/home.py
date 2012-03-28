@@ -97,8 +97,9 @@ class DadosGovBrHomeController(HomeController):
         from ckan.logic import get_action
 
         context = {'model': model, 'session': model.Session,
-                   'user': c.user or c.author}        
-        model = context['model']
+                   'user': c.user or c.author}
+  
+        #model = context['model']
         query = model.Session.query(model.Package)
         query = query.join(model.Activity, model.Activity.object_id==model.Package.id)
         query = query.filter(model.Activity.activity_type == 'new package')
