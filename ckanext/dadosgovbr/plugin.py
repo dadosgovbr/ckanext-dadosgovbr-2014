@@ -1,6 +1,6 @@
 import os
 from ckan.plugins import implements, SingletonPlugin
-from ckan.plugins import IConfigurer
+from ckan.plugins import IConfigurer, IRoutes
 
 class DadosGovBrTheme(SingletonPlugin):
     '''The theme for the dados.gov.br site.
@@ -11,6 +11,7 @@ class DadosGovBrTheme(SingletonPlugin):
 
     '''
     implements(IConfigurer, inherit=True)
+    implements(IRoutes, inherit=True)
 
     def update_config(self, config):
         '''This IConfigurer implementation causes CKAN to look in the
@@ -34,3 +35,10 @@ class DadosGovBrTheme(SingletonPlugin):
                 config.get('extra_public_paths', '')])
         config['extra_template_paths'] = ','.join([template_dir,
                 config.get('extra_template_paths', '')])
+
+    def after_map(self, map):
+        # map.redirect("/analytics/package/top", "/analytics/dataset/top")
+        map.connect('home', '/',
+                    controller='ckanext.dadosgovbr.controllers:DadosGovBrHomeController',
+                    action='index')
+        return map
