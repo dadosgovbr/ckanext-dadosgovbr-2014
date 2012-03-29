@@ -22,9 +22,11 @@ class DadosGovBrHomeController(HomeController):
         now = datetime.now()
         timedelta = now - t
         if timedelta.seconds < 900: # less than 15 minutes
-            return u"%d minutos atrás" % int(timedelta.seconds/60)
-        elif timedelta.days < 1: # less than 1 day
+            return u"há %d minutos" % int(timedelta.seconds/60)
+        elif t.date() == now.date(): # less than 1 day
             return u"às %s" % t.strftime(u"%H:%M")
+        elif timedelta.days < 3:
+            return u"há %d dias" % timedelta.days
         else:
             return t.strftime(u"%d %b")
     
@@ -136,9 +138,10 @@ class DadosGovBrHomeController(HomeController):
         c.most_recent_datasets = [
             (
                 g.site_url + 'dataset/' + dataset.name,
-                cls.limita_tamanho(dataset.title, 20),
-                cls.limita_tamanho(dataset.author, 20),
-                cls.tempo_atras(activity.timestamp)
+                cls.limita_tamanho(dataset.title, 61),
+                cls.limita_tamanho(dataset.author, 28),
+                cls.tempo_atras(activity.timestamp),
+                activity.timestamp.isoformat(),
             )   for dataset, activity in most_recent_from_bd]
 
     def index(self):
