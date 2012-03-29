@@ -28,7 +28,7 @@ class DadosGovBrHomeController(HomeController):
         elif t.date() == now.date() - timedelta(days=1):
             return u"ontem"
         elif delta.days < 3:
-            return u"há %d dias" % (now.date() - t.date()).days()
+            return u"há %d dias" % (now.date() - t.date()).days
         else:
             return t.strftime(u"%d %b")
     
