@@ -55,7 +55,7 @@ class DadosGovBrHomeController(HomeController):
         for package, recent, ever in dbutil.get_top_packages(limit=5):
             if getattr(package, "title", False):
                 package_short = cls.limita_tamanho(package.title, tamanho)
-            c.top_packages.append((package_shot, package, recent, ever))
+            c.top_packages.append((package_short, package, recent, ever))
 
         # Enable to set resources variable, don't forget to enable it on template too!
         #c.top_resources = dbutil.get_top_resources(limit=10)
