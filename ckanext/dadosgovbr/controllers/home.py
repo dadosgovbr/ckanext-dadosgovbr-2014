@@ -14,7 +14,19 @@ class DadosGovBrHomeController(HomeController):
     @staticmethod
     def formata_data(d):
         return d.strftime("%d/%m/%Y")
-
+    
+    @staticmethod
+    def tempo_atras(t):
+        from datetime import datetime
+        now = datetime.now()
+        timedelta = now - t
+        if timedelta.seconds < 900: # less than 15 minutes
+            return u"%d minutos atrás" % int(timedelta.seconds/60)
+        elif timedelta.days < 1: # less than 1 day
+            return u"às %s" % t.strftime(u"%H:%M")
+        else:
+            return t.strftime(u"%d %b")
+    
     @classmethod
     def set_news_section(cls):
         from feedreader.parser import from_url
@@ -120,8 +132,12 @@ class DadosGovBrHomeController(HomeController):
         #obj_list_dictize
         #recent_dict = model_dictize.package_dictize(most_recent_from_bd, context)
 
-        c.most_recent_datasets = d.obj_list_dictize([dataset for dataset, activity in most_recent_from_bd], context)
-        c.most_recent_datasets_activities = d.obj_list_dictize([activities for dataset, activity in most_recent_from_bd], context)
+        c.most_recent_datasets = [
+            g.site_url + 'dataset/' + dataset.name,
+            cls.limita_tamanho(dataset.title, 20),
+            cls.limita_tamanho(dataset.author, 20),
+            cls.tempo_atras(activity.timestamp)
+                for dataset, activity in most_recent_from_bd]
 
     def index(self):
         """This handles dados.gov.br's index home page.
