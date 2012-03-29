@@ -41,7 +41,7 @@ class DadosGovBrHomeController(HomeController):
         c.articles = []
         for entry in parsed.entries[:3]:
             c.articles.append((
-                entry.link,
+                entry.link.replace('/wp/index.php/noticia/','/noticia/'),
                 cls.formata_data(entry.published),
                 cls.limita_tamanho(entry.title, 70),
                 cls.limita_tamanho(entry.description, 165)
