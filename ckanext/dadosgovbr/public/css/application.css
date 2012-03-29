@@ -1492,6 +1492,8 @@ body {
 
 #main {
   width: 980px; }
+  #main #minornavigation {
+    border: 0px; }
 
 #wrap {
   *zoom: 1;

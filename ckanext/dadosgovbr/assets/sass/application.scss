@@ -66,6 +66,9 @@ body{
 
 #main{
   width: $sitewidth;
+  #minornavigation{
+    border:0px;
+  }
 }
 
 #wrap{
