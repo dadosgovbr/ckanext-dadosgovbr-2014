@@ -134,11 +134,12 @@ class DadosGovBrHomeController(HomeController):
         #recent_dict = model_dictize.package_dictize(most_recent_from_bd, context)
 
         c.most_recent_datasets = [
-            g.site_url + 'dataset/' + dataset.name,
-            cls.limita_tamanho(dataset.title, 20),
-            cls.limita_tamanho(dataset.author, 20),
-            cls.tempo_atras(activity.timestamp)
-                for dataset, activity in most_recent_from_bd]
+            (
+                g.site_url + 'dataset/' + dataset.name,
+                cls.limita_tamanho(dataset.title, 20),
+                cls.limita_tamanho(dataset.author, 20),
+                cls.tempo_atras(activity.timestamp)
+            )   for dataset, activity in most_recent_from_bd]
 
     def index(self):
         """This handles dados.gov.br's index home page.
