@@ -1494,6 +1494,10 @@ body {
   width: 980px; }
   #main #minornavigation {
     border: 0px; }
+  #main #content {
+    margin-left: 1em; }
+  #main .page_heading {
+    margin-left: 1em; }
 
 #wrap {
   *zoom: 1;
