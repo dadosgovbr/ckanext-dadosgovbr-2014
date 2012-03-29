@@ -94,10 +94,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <py:for each="link, title, author, time_ago, timestamp in c.most_recent_datasets">
+                    <py:for each="link, title_short, title, author_short, author, time_ago, timestamp in c.most_recent_datasets">
                       <tr>
-                        <td><a href="${link}">${title}</a></td>
-                        <td>${author}</td>
+                        <td><a href="${link}" title="${title}">${title_short}</a></td>
+                        <td title="${author}">${author_short}</td>
                         <td title="${timestamp}">${time_ago}</td>
                       </tr>
                     </py:for>

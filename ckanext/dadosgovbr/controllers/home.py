@@ -140,8 +140,10 @@ class DadosGovBrHomeController(HomeController):
         c.most_recent_datasets = [
             (
                 g.site_url + 'dataset/' + dataset.name,
-                cls.limita_tamanho(dataset.title, 51),
+                cls.limita_tamanho(dataset.title, 46),
+                dataset.title,
                 cls.limita_tamanho(dataset.author, 28),
+                dataset.author,
                 cls.tempo_atras(activity.timestamp),
                 activity.timestamp.isoformat(),
             )   for dataset, activity in most_recent_from_bd]
