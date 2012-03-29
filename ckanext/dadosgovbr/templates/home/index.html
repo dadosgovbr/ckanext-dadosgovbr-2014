@@ -74,7 +74,7 @@
                   <tbody>
                    <py:for each="package_short, package, recent, ever in c.top_packages">
                       <tr>
-                        <td>${h.link_to(package_short or package.name, h.url_for(controller='package', action='read', id=package.name), title=package_short)}
+                        <td>${h.link_to(package_short or package.name, h.url_for(controller='package', action='read', id=package.name), title=package.title)}
                         </td>
                         <td>${recent}</td>
                         <td>${ever}</td>
