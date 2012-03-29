@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from ckan.lib.base import c, g, h, model
 from ckan.controllers.home import HomeController
 
