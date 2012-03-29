@@ -18,15 +18,17 @@ class DadosGovBrHomeController(HomeController):
     
     @staticmethod
     def tempo_atras(t):
-        from datetime import datetime
+        from datetime import datetime, timedelta
         now = datetime.now()
-        timedelta = now - t
-        if timedelta.seconds < 900: # less than 15 minutes
-            return u"há %d minutos" % int(timedelta.seconds/60)
-        elif t.date() == now.date(): # less than 1 day
+        delta = now - t
+        if delta.seconds < 900: # less than 15 minutes
+            return u"há %d minutos" % int(delta.seconds/60)
+        elif now.date() == t.date(): # less than 1 day
             return u"às %s" % t.strftime(u"%H:%M")
-        elif timedelta.days < 3:
-            return u"há %d dias" % timedelta.days
+        elif t.date() == now.date() - timedelta(days=1):
+            return u"ontem"
+        elif delta.days < 3:
+            return u"há %d dias" % (now.date() - t.date()).days()
         else:
             return t.strftime(u"%d %b")
     
@@ -138,7 +140,7 @@ class DadosGovBrHomeController(HomeController):
         c.most_recent_datasets = [
             (
                 g.site_url + 'dataset/' + dataset.name,
-                cls.limita_tamanho(dataset.title, 61),
+                cls.limita_tamanho(dataset.title, 51),
                 cls.limita_tamanho(dataset.author, 28),
                 cls.tempo_atras(activity.timestamp),
                 activity.timestamp.isoformat(),
