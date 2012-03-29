@@ -101,8 +101,8 @@ class DadosGovBrHomeController(HomeController):
                    'user': c.user or c.author}
   
         #model = context['model']
-        query = model.Session.query(model.Package)
-        query = query.join(model.Activity, model.Activity.object_id==model.Package.id)
+        query = model.Session.query(model.Package, model.Activity)
+        query = query.filter(model.Activity.object_id==model.Package.id)
         query = query.filter(model.Activity.activity_type == 'new package')
         query = query.filter(model.Package.state == 'active')
         query = query.order_by(desc(model.Activity.timestamp))
