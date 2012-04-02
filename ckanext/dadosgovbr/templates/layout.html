@@ -4,7 +4,7 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   py:strip="">
   <head py:match="head">
-    ${select('//meta|//title|//link[@rel!="icon"]|//script')}
+    ${select('meta|title|link[@rel!="icon"]|script')}
     <link rel="stylesheet" href="${g.site_url + 'css/application.css'}" type="text/css" media="screen" charset="utf-8" />
     <link rel="icon" href="img/dadosgovbr.ico" />
     <script src="${g.site_url + 'scripts/jquery-1.7.1.js'}"></script>
