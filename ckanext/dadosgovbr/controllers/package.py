@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import datetime
 
+from pylons import config
+
 from ckan.logic import get_action, check_access
 from ckan.lib.helpers import date_str_to_datetime
 from ckan.logic import NotFound, NotAuthorized, ValidationError
