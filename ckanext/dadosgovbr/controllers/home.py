@@ -21,9 +21,9 @@ class DadosGovBrHomeController(HomeController):
         from datetime import datetime, timedelta
         now = datetime.now()
         delta = now - t
-        if (days == 0) and (delta.seconds < 60): # less than a minute
+        if (delta.days == 0) and (delta.seconds < 60): # less than a minute
             return u"agora"
-        elif (days == 0) and (delta.seconds < 900): # less than 15 minutes
+        elif (delta.days == 0) and (delta.seconds < 900): # less than 15 minutes
             return u"há %d minutos" % int(delta.seconds/60)
         elif now.date() == t.date(): # less than 1 day
             return u"às %s" % t.strftime(u"%H:%M")
