@@ -14,7 +14,6 @@ class DadosGovBrDatasetController(PackageController):
         subject = extras.get("VCGE", None)
         vcge_re = r"([^[]+)\s*\[(http://[^[\]]+)\]\s?[,;]?\s?"
         c.subjects = []
-        import pdb; pdb.set_trace()
         if subject:
             for name, url in re.findall(vcge_re, subject):
                 c.subjects.append((name,url))

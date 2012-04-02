@@ -97,7 +97,7 @@
           </td>
         </tr>
 
-        <tr py:for each="name, url in c.subjects">
+        <tr py:for="(name, url) in c.subjects">
           <td colspan="2" class="dataset-details">${h.link_to(name, url)}</td>
         </tr>
 
