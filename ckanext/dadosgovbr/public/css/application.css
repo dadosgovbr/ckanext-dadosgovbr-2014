@@ -1498,6 +1498,8 @@ body {
     margin-left: 1em; }
   #main .page_heading {
     margin-left: 1em; }
+  #main a:visited {
+    color: #607890; }
 
 #wrap {
   *zoom: 1;
