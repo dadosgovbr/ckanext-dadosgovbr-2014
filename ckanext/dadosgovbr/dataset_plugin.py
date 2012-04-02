@@ -10,6 +10,6 @@ class DadosGovBrDatasetView(SingletonPlugin):
     def before_map(self, map):
         map.connect('dataset', '/dataset',
                     controller='ckanext.dadosgovbr.controllers.package:DadosGovBrDatasetController',
-                    action='index')
+                    action='read')
         return map
 
