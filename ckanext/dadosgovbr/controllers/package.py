@@ -7,11 +7,14 @@ class DadosGovBrDatasetController(PackageController):
     ckanext-dadosgovbr theme.
     """
     def read(self, id, format="html"):
+        # method signature to be changed in/after CKAN 1.6.1
+        rendered = super(DadosGovBrDatasetController, self).read(id) #, format)
         import re
-        subject = c.pkg_extras.get(VCGE, None)
+        extras = c.pkg.extras
+        subject = extras.get("VCGE", None)
         vcge_re = r"([^[]+)\s*\[(http://[^[\]]+)\]\s?[,;]?\s?"
         c.subjects = []
         if subject:
-            for name, url in re.findall(subject):
+            for name, url in re.findall(vcge_re, subject):
                 c.subjects.append((name,url))
-        return super(DadosGovBrDatasetController, self).read(id, format)
+        return rendered
