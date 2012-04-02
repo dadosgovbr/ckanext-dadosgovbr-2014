@@ -99,7 +99,7 @@
 
         <tr>
           <td class="dataset-label">Assuntos</td>
-          <td class="dataset-details"><span py:for="(name, url) in c.subjects">${h.link_to(name, url)}</span></td>
+          <td class="dataset-details"><span py:for="(name, url) in c.subjects">${h.link_to(name, url, target="_new")}</span></td>
         </tr>
 
         <tr py:for="i, (key, value) in enumerate(c.pkg_extras)"
