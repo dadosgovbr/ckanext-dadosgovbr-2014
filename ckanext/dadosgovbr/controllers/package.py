@@ -17,5 +17,5 @@ class DadosGovBrDatasetController(PackageController):
         if subject:
             for name, url in re.findall(vcge_re, subject):
                 c.subjects.append((name,url))
-        return rendered
+        return super(DadosGovBrDatasetController, self).read(id)
 
