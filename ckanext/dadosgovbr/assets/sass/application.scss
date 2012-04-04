@@ -109,9 +109,9 @@ body{
     h1{
       @include column(3);
       /*background: #EDD500;*/
-      $alturalogo: 146px;
+      $alturalogo: 150px;
       height: $alturalogo;
-      width: 320px;
+      width: 340px;
       background-image: url("../img/bg/logo3.png");
       background-repeat: no-repeat;
       overflow: hidden;

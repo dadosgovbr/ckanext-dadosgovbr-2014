@@ -1541,15 +1541,15 @@ body {
       margin-left: 20px;
       width: 220px;
       /*background: #EDD500;*/
-      height: 146px;
-      width: 320px;
+      height: 150px;
+      width: 340px;
       background-image: url("../img/bg/logo3.png");
       background-repeat: no-repeat;
       overflow: hidden; }
       #wrap header h1 a {
         display: block;
-        height: 146px;
-        padding-top: 146px; }
+        height: 150px;
+        padding-top: 150px; }
     #wrap header #news {
       clear: both;
       float: left;
