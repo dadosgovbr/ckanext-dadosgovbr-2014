@@ -1554,12 +1554,26 @@ body {
       clear: both;
       float: left;
       margin-left: 20px;
-      width: 180px;
-      margin-right: 20px;
+      width: 160px;
       float: right;
       height: 35px;
-      margin-top: -35px;
-      border: 1px solid red; }
+      margin-top: -50px; }
+      #wrap header #news li {
+        display: block;
+        float: left;
+        margin-right: 15px; }
+        #wrap header #news li a {
+          height: 35px;
+          width: 35px;
+          overflow: hidden;
+          background-position: 0 0;
+          background-image: url("../img/bg/bts_redes.png");
+          display: block;
+          padding-top: 35px; }
+      #wrap header #news #twitter {
+        background-position: 35px 0; }
+      #wrap header #news #identica {
+        background-position: 70px 0; }
     #wrap header nav {
       clear: both;
       margin-top: 20px;

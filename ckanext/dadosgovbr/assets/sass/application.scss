@@ -121,12 +121,31 @@ body{
       }
     }
     #news{
-      clear: both;
-      @include column(2+1/2, true);
-      float: right;
-      height: 35px;
-      margin-top: -35px;
-      border: 1px solid red;
+        clear: both;
+        @include column(2+1/4);
+        float: right;
+        height: 35px;
+        margin-top: -50px;
+        li {
+            display: block;
+            float: left;
+            margin-right: 15px;
+            a {
+                height: 35px;
+                width: 35px;
+                overflow: hidden;
+                background-position: 0 0;
+                background-image:url("../img/bg/bts_redes.png");
+                display: block;
+                padding-top: 35px;
+            }
+        }
+        #twitter{
+            background-position: 35px 0;         
+        }
+        #identica{
+            background-position: 70px 0;
+        }
     }
     nav{
       clear: both;
