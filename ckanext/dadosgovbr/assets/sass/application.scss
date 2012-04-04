@@ -13,6 +13,7 @@
 
 $sitewidth: 980px;
 $sectionmargin: 12px;
+$iconsize: 36px;
 
 body{
   background-image: url(../img/bg/body-bg.jpg);
@@ -130,9 +131,11 @@ body{
             display: block;
             float: left;
             margin-right: 15px;
+            height: $iconsize;
+            overflow: hidden;
             a {
-                height: 35px;
-                width: 35px;
+                height: $iconsize;
+                width: $iconsize;
                 overflow: hidden;
                 background-position: 0 0;
                 background-image:url("../img/bg/bts_redes.png");
@@ -140,11 +143,11 @@ body{
                 padding-top: 35px;
             }
         }
-        #twitter{
-            background-position: 35px 0;         
+        #twitter a{
+            background-position: -$iconsize 0;         
         }
-        #identica{
-            background-position: 70px 0;
+        #identica a{
+            background-position: -$iconsize*2 0;
         }
     }
     nav{

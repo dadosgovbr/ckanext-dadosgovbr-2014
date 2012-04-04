@@ -1561,19 +1561,21 @@ body {
       #wrap header #news li {
         display: block;
         float: left;
-        margin-right: 15px; }
+        margin-right: 15px;
+        height: 36px;
+        overflow: hidden; }
         #wrap header #news li a {
-          height: 35px;
-          width: 35px;
+          height: 36px;
+          width: 36px;
           overflow: hidden;
           background-position: 0 0;
           background-image: url("../img/bg/bts_redes.png");
           display: block;
           padding-top: 35px; }
-      #wrap header #news #twitter {
-        background-position: 35px 0; }
-      #wrap header #news #identica {
-        background-position: 70px 0; }
+      #wrap header #news #twitter a {
+        background-position: -36px 0; }
+      #wrap header #news #identica a {
+        background-position: -72px 0; }
     #wrap header nav {
       clear: both;
       margin-top: 20px;
