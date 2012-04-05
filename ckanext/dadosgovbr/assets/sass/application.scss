@@ -339,9 +339,14 @@ body{
             background-color: #777777;
             padding: 2px 5px;
             margin: 2px 1px;
+            a{
+            color: #FFFFFF;
+            text-decoration:none;
+            }
             &:hover{
                 background-color:#cca300;
                 text-decoration: none;
+                color: #FFFFFF;
             }
         }
     }
