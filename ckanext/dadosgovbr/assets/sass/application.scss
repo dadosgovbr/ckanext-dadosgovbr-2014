@@ -393,6 +393,10 @@ body{
     }
 
     #apps{
+      background: #ececec;
+      border: 1px solid #7d99aa;
+      -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
       @include column(12);
       ul{
@@ -416,7 +420,7 @@ body{
             font-weight: 700;
           }
           img{
-            width: 110px;
+            width: 107px;
             height: 110px;
             float: left;
             margin-right: 10px;
@@ -449,6 +453,9 @@ body{
             a { color: inherit; font-weight: bold; }
         }
     }
+
+
+
 
   }
 

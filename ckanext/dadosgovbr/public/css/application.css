@@ -1811,6 +1811,10 @@ body {
         color: gray;
         margin-top: 1em; }
     #wrap div[role='main'] #apps {
+      background: #ececec;
+      border: 1px solid #7d99aa;
+      -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
       float: left;
       margin-left: 20px;
@@ -1835,7 +1839,7 @@ body {
               margin-bottom: 10px;
             font-weight: 700; }
           #wrap div[role='main'] #apps ul li img {
-            width: 110px;
+            width: 107px;
             height: 110px;
             float: left;
             margin-right: 10px;
