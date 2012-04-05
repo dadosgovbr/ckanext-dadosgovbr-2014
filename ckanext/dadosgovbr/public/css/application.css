@@ -1783,7 +1783,7 @@ body {
       #wrap div[role='main'] #new p {
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray; }
-      #wrap div[role='main'] #new span {
+      #wrap div[role='main'] #new span.datanoticia {
         float: right;
         color: gray;
         margin-top: 1em; }
