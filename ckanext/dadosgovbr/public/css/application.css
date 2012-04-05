@@ -1753,9 +1753,12 @@ body {
       float: left;
       margin-left: 20px;
       width: 380px; }
-    #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
+    #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
       margin-top: 20px;
       height: 248px; }
+    #wrap div[role='main'] #featureddata {
+      margin-top: 20px;
+      height: 268px; }
     #wrap div[role='main'] #top_tags .tags {
       margin-left: 1em; }
       #wrap div[role='main'] #top_tags .tags li {
@@ -1800,7 +1803,7 @@ body {
         -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); }
     #wrap div[role='main'] #new {
       height: 330px;
-      margin-top: -41px; }
+      margin-top: -42px; }
       #wrap div[role='main'] #new p {
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray; }

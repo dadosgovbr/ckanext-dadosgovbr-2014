@@ -315,9 +315,14 @@ body{
       @include column(5);
     }
 
-    #featureddata, #top_apps,  #top_tags{
+    #top_apps,  #top_tags{
       margin-top: 20px;
       height: 248px;
+    }
+
+    #featureddata{
+      margin-top: 20px;
+      height: 268px;
     }
     
     #top_tags .tags{
@@ -376,7 +381,7 @@ body{
 	
     #new{
       height: 330px;
-      margin-top: -41px;
+      margin-top: -42px;
       p{
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray;
