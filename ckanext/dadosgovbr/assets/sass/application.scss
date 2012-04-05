@@ -328,11 +328,21 @@ body{
         margin-left: 1em;
         li {
             //background: #AFC6E9;
-            border: none;
-            display: inline-block;
-            font-weight: normal;
-            list-style-type: none;
-            padding: 0 3px 2px;
+            //border: none;
+            //display: inline-block;
+            //font-weight: normal;
+            //list-style-type: none;
+            //padding: 0 3px 2px;
+            display: block;
+            float: left;
+            color: #FFFFFF;
+            background-color: #777777;
+            padding: 2px 5px;
+            margin: 2px 1px;
+            &:hover{
+                background-color:#cca300;
+                text-decoration: none;
+            }
         }
     }
     
