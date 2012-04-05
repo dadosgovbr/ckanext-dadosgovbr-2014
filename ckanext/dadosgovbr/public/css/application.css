@@ -1642,7 +1642,8 @@ body {
           text-decoration: none; }
   #wrap div[role='main'] {
     *zoom: 1;
-    margin-top: 15px; }
+    margin-top: 15px;
+    margin-top: 280px; }
     #wrap div[role='main']:before, #wrap div[role='main']:after {
       display: table;
       content: ""; }

@@ -76,7 +76,6 @@ body{
 }
 
 #main{
-  margin-top: $header-height + 20;
   width: $sitewidth;
   #minornavigation{
     border:0px;
@@ -209,6 +208,7 @@ body{
   div[role='main']{
     @include row();
     margin-top: 15px;
+    margin-top: $header-height + 20;
 
     section{
       background: #ECECEC;
