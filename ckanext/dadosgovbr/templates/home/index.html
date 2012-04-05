@@ -6,14 +6,13 @@
   <py:def function="page_title">Welcome</py:def>
     <div py:match="//div[@id='content']" class="front-page">
     <div id="container">
-      <!--<div role='main'> -->
 
         <form action="${h.url_for(controller='package', action='search')}" id="search" method="GET">
           <input class="search-field" name="q" type="text" placeholder="busca" id="busca" />
           <input type="submit" alt="buscar" value="" id="btnbusca" />
         </form>
         <section id="featureddata">
-          <h1> Dados em destaque </h1>
+          <h1> <span>Dados em destaque</span> </h1>
           <!--<article>
           <h2><a href="#">Open data is the raw material of 'new industrial revolution'‎</a></h2>
           <p>But what is the point of open data? Even those who applaud the commitment to transparency that progressively releasing this information demonstrates need to ...</p>
@@ -35,6 +34,7 @@
         </section>
 
         <section id="new">
+         <h1><span>Notícias</span></h1>
          <py:for each="link, published_date, title, description in c.articles">
           <article>
           <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
@@ -44,7 +44,7 @@
         </section>
 
         <section id="top_tags">
-          <h1> Dados por etiqueta </h1>
+          <h1> <span>Dados por etiqueta </span></h1>
           <ul class="tags clearfix">
            <py:for each="link, tag, count in c.top_tags">
             <li><a href="${link}">${tag}</a> (${count})</li>
@@ -176,7 +176,6 @@
           </ul>
         </section>
 
-      <!--</div> div role main -->
   </div>
   </div>
   <xi:include href="layout.html" />
