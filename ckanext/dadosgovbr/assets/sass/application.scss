@@ -76,6 +76,7 @@ body{
 }
 
 #main{
+  margin-top: $header-height + 20;
   width: $sitewidth;
   #minornavigation{
     border:0px;
