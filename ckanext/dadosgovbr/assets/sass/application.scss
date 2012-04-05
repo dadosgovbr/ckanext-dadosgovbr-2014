@@ -207,7 +207,6 @@ body{
 
   div[role='main']{
     @include row();
-    margin-top: 15px;
     margin-top: $header-height + 20;
 
     section{
