@@ -1846,20 +1846,20 @@ body {
             width: 148px;
             float: left;
             margin-left: 5px; }
-  #wrap #top_apps {
-    background: none;
-    border: 0; }
-    #wrap #top_apps .tab-content {
-      height: 215px;
-      background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
-      border: 1px solid #DDD;
-      -moz-border-bottom-right-radius: 5px;
-      -webkit-border-bottom-right-radius: 5px;
-      -moz-border-bottom-left-radius: 5px;
-      -webkit-border-bottom-left-radius: 5px; }
-      #wrap #top_apps .tab-content a {
-        color: inherit;
-        font-weight: bold; }
+    #wrap div[role='main'] #top_apps {
+      background: none;
+      border: 0; }
+      #wrap div[role='main'] #top_apps .tab-content {
+        height: 215px;
+        background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
+        border: 1px solid #DDD;
+        -moz-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px; }
+        #wrap div[role='main'] #top_apps .tab-content a {
+          color: inherit;
+          font-weight: bold; }
 
 .footer.outer {
   position: absolute;

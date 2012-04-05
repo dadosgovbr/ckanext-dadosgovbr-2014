@@ -391,6 +391,7 @@ body{
         margin-top: 1em;
       }
     }
+
     #apps{
       margin-top: 20px;
       @include column(12);
@@ -432,7 +433,6 @@ body{
         }
       }
     }
-  }
 
     #top_apps{
         background: none;
@@ -449,6 +449,9 @@ body{
             a { color: inherit; font-weight: bold; }
         }
     }
+
+  }
+
 
 }
 
