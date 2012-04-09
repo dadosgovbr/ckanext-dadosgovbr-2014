@@ -2,6 +2,12 @@
 from ckan.lib.base import c, g, h, model
 from ckan.controllers.home import HomeController
 
+# pull out the default locale from the environment (otherwise 'C' gets used)
+# see: http://mail.python.org/pipermail/python-dev/2006-April/063487.html
+# this is used by datetime.strftime
+import locale
+locale.setlocale(locale.LC_ALL, '')
+
 class DadosGovBrHomeController(HomeController):
     """dados.gov.br theme customized home controller
     """
