@@ -1774,6 +1774,8 @@ body {
           background-color: #cca300;
           text-decoration: none;
           color: #FFFFFF; }
+      #wrap div[role='main'] #top_tags .tags p.mais {
+        margin-top: -0.8em; }
     #wrap div[role='main'] form#search {
       margin-bottom: 0;
       height: 30px;
@@ -1821,6 +1823,9 @@ body {
         float: right;
         color: gray;
         margin-top: 1em; }
+      #wrap div[role='main'] #new p.mais {
+        border-bottom: none;
+        margin-top: -1.5em; }
     #wrap div[role='main'] #apps {
       background: #ececec;
       border: 1px solid #7d99aa;
@@ -1876,8 +1881,7 @@ body {
           color: inherit;
           font-weight: bold; }
     #wrap div[role='main'] p.mais {
-      float: right;
-      border: none; }
+      float: right; }
 
 .footer.outer {
   position: absolute;

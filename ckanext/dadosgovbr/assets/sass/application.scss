@@ -343,6 +343,9 @@ body{
                 color: #FFFFFF;
             }
         }
+        p.mais {
+            margin-top: -0.8em;
+        }
     }
     
     form#search{
@@ -403,6 +406,10 @@ body{
         float:right;
         color:gray;
         margin-top: 1em;
+      }
+      p.mais {
+        border-bottom: none;
+        margin-top: -1.5em;
       }
     }
 
@@ -470,7 +477,6 @@ body{
 
     p.mais {
         float: right;
-        border: none;
     }
     
   }
