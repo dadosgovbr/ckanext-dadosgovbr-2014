@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from ckan.lib.base import c, g, h, model
 from ckan.controllers.home import HomeController
+import ckan.logic
+from ckan.lib.search import SearchError
 
 # pull out the default locale from the environment (otherwise 'C' gets used)
 # see: http://mail.python.org/pipermail/python-dev/2006-April/063487.html
