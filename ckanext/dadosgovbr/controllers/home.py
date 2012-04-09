@@ -54,7 +54,7 @@ class DadosGovBrHomeController(HomeController):
                 'offset':0,
                 'limit':0,
                 'order_by': None,
-                'fields': [],
+                'fields': {},
             }
             query = ckan.logic.get_action('resource_search')(context,data_dict)
             c.resource_count = query['count']
