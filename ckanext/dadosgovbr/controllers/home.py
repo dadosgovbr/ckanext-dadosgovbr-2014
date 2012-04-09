@@ -40,6 +40,24 @@ class DadosGovBrHomeController(HomeController):
         else:
             return t.strftime(u"%d %b")
     
+    @staticmethod
+    def set_resource_count:
+        try:
+            # resource search
+            context = {'model': model, 'session': model.Session,
+                       'user': c.user or c.author}
+            data_dict = {
+                'q':'*:*',
+                'facet.field':g.facets,
+                'rows':0,
+                'start':0,
+            }
+            query = ckan.logic.get_action('resource_search')(context,data_dict)
+            c.resource_count = query['count']
+        except SearchError, se:
+            c.resource_count = 0
+            c.groups = []
+    
     @classmethod
     def set_news_section(cls):
         from feedreader.parser import from_url
@@ -160,6 +178,10 @@ class DadosGovBrHomeController(HomeController):
         """This handles dados.gov.br's index home page.
         All extra data displayed on the home page should be handled here.
         """
+        # get number of resources
+        # note: number of packages is set by the default theme index controller
+        self.set_resource_count()
+        
         # news section, parsed from feed
         self.set_news_section()
 
