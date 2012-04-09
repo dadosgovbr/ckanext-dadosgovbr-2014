@@ -1681,7 +1681,7 @@ body {
           margin-left: 0; }
         #wrap div[role='main'] section .nav-tabs li.active {
           z-index: 999; }
-        #wrap div[role='main'] section .nav-tabs li.active a, #wrap div[role='main'] section .nav-tabs a:hover {
+        #wrap div[role='main'] section .nav-tabs li.active a {
           color: #FFFFFF;
           border: 1px solid #3190d4;
           text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5), 0px -1px 0px rgba(0, 0, 0, 0.3);
