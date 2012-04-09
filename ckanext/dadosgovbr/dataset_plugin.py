@@ -8,7 +8,7 @@ class DadosGovBrDatasetView(SingletonPlugin):
     implements(IRoutes, inherit=True)
 
     def before_map(self, map):
-        map.connect('dataset', '/dataset/{id}',
+        map.connect('/dataset/{id}',
                     controller='ckanext.dadosgovbr.controllers.package:DadosGovBrDatasetController',
                     action='read')
         return map
