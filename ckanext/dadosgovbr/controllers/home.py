@@ -41,7 +41,7 @@ class DadosGovBrHomeController(HomeController):
             return t.strftime(u"%d %b")
     
     @staticmethod
-    def set_resource_count:
+    def set_resource_count():
         try:
             # resource search
             context = {'model': model, 'session': model.Session,
