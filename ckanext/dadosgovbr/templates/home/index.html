@@ -19,6 +19,7 @@
           <p>${notes}</p>
           </article>
         </py:for>
+        <p class="mais">${h.link_to(u"mais dados em destaque", h.url_for(controller='group', action='read', id="dados-em-destaque"))}</p>
         </section>
 
         <section id="new">
@@ -29,6 +30,7 @@
           <p>${description}</p>
           </article>
          </py:for>
+         <p class="mais"><a href="#">saiba mais</a></p>
         </section>
 
         <section id="top_tags">
@@ -38,6 +40,7 @@
             <li><a href="${link}">${tag} (${count})</a></li>
            </py:for>
           </ul>
+        <p class="mais">${h.link_to(u"mais etiquetas", h.url_for(controller='tag', action='read'))}</p>
         </section>
         
         <section id="top_apps">
@@ -136,6 +139,7 @@
               <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div>
           </ul>
+          <p class="mais"><a href="#">saiba mais</a></p>
         </section>
 
   </div>
