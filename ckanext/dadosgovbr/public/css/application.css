@@ -1875,6 +1875,9 @@ body {
         #wrap div[role='main'] #top_apps .tab-content a {
           color: inherit;
           font-weight: bold; }
+    #wrap div[role='main'] p.mais {
+      float: right;
+      border: none; }
 
 .footer.outer {
   position: absolute;
