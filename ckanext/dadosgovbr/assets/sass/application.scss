@@ -178,7 +178,7 @@ body{
             float: left;
             width: 100%;
             a {
-                font-size: 13px;
+                font-size: 1em;
             }
             ul.nav{
                 @include column(9);
@@ -443,7 +443,7 @@ body{
           }
 
           p{
-            font-size: 13px;
+            font-size: 1em;
             line-height: 18px;
             width: 148px;
             float: left;

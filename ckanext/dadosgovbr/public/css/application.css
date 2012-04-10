@@ -1583,7 +1583,7 @@ body {
       float: left;
       width: 100%; }
       #wrap header nav a {
-        font-size: 13px; }
+        font-size: 1em; }
       #wrap header nav ul.nav {
         float: left;
         margin-left: 20px;
@@ -1860,7 +1860,7 @@ body {
             margin-right: 10px;
             background: #3AAA35; }
           #wrap div[role='main'] #apps ul li p {
-            font-size: 13px;
+            font-size: 1em;
             line-height: 18px;
             width: 148px;
             float: left;
