@@ -65,7 +65,7 @@ class DadosGovBrHomeController(HomeController):
     @classmethod
     def set_news_section(cls):
         from feedreader.parser import from_url
-        parsed = from_url('http://189.9.137.65/wp/index.php/feed')
+        parsed = from_url('http://127.0.0.1/feed')
         c.articles = []
         for entry in parsed.entries[:3]:
             c.articles.append((
