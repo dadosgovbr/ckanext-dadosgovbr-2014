@@ -12,7 +12,7 @@
           <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos</p>
         </form>
         <section id="featureddata">
-          <h1> <span><a class="mais" href="/dataset?groups=dados-em-destaque">Dados em destaque</a></span> </h1>
+          <h1> <span>${h.link_to(u"Dados em destaque", h.url_for(controller='group', action='read', id='dados-em-destaque'), class_="mais")}</span> </h1>
         <py:for each="link, title, notes in c.featured_datasets">
           <article>
           <h2><a href="${link}">${title}‎</a></h2>
