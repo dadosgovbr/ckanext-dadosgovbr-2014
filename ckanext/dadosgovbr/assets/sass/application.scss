@@ -304,6 +304,9 @@ body{
             line-height: 140%;
             a { color: inherit; }
         }
+        p{
+            font-size: 1em;
+        }
     }
     
 
@@ -458,7 +461,7 @@ body{
         border: 0;
 
         .tab-content {
-            height: 215px;
+            height: 16.538em;
             background: #ECECEC url("../img/bg/bg_boxes.png") 0 0 repeat;
             border: 1px solid #DDD;
             -moz-border-bottom-right-radius: 5px;

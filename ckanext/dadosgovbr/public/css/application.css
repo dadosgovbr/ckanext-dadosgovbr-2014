@@ -1745,6 +1745,8 @@ body {
         line-height: 140%; }
         #wrap div[role='main'] section h2 a {
           color: inherit; }
+      #wrap div[role='main'] section p {
+        font-size: 1em; }
     #wrap div[role='main'] form#search, #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps {
       float: left;
       margin-left: 20px;
@@ -1869,7 +1871,7 @@ body {
       background: none;
       border: 0; }
       #wrap div[role='main'] #top_apps .tab-content {
-        height: 215px;
+        height: 16.538em;
         background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
         border: 1px solid #DDD;
         -moz-border-bottom-right-radius: 5px;
