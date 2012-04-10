@@ -1754,10 +1754,10 @@ body {
       margin-left: 20px;
       width: 380px; }
     #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
-      height: 248px; }
+      height: 19.077em; }
     #wrap div[role='main'] #featureddata {
       margin-top: 20px;
-      height: 303px; }
+      height: 23.308em; }
     #wrap div[role='main'] #top_tags
     .tags {
       margin-left: 1em; }
@@ -1816,7 +1816,7 @@ body {
         color: gray;
         margin-top: -0.3em; }
     #wrap div[role='main'] #new {
-      height: 365px;
+      height: 28.077em;
       margin-top: -42px; }
       #wrap div[role='main'] #new p {
         padding-bottom: 4px;
