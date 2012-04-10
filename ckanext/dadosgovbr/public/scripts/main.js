@@ -14,7 +14,13 @@ function resizeText(multiplier) {
   if (document.body.style.fontSize == "") {
     document.body.style.fontSize = "1.0em";
   }
-  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+
+  var size = parseFloat(document.body.style.fontSize);
+
+  if ((size <= 3) && (size => 0.5)){
+    document.body.style.fontSize = size + (multiplier * 0.2) + "em";    
+  }
+
 }
 
 
