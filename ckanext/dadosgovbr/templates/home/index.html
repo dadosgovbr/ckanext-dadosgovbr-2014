@@ -32,7 +32,7 @@
         </section>
 
         <section id="top_tags">
-          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class="mais")}</span></h1>
+          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class_="mais")}</span></h1>
           <ul class="tags clearfix">
            <py:for each="link, tag, count in c.top_tags">
             <li><a href="${link}">${tag} (${count})</a></li>
