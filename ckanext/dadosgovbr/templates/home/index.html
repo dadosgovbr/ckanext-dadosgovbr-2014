@@ -12,35 +12,32 @@
           <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos</p>
         </form>
         <section id="featureddata">
-          <h1> <span>Dados em destaque</span> </h1>
+          <h1> <span><a class="mais" href="/dataset?groups=dados-em-destaque">Dados em destaque</a></span> </h1>
         <py:for each="link, title, notes in c.featured_datasets">
           <article>
           <h2><a href="${link}">${title}‎</a></h2>
           <p>${notes}</p>
           </article>
         </py:for>
-        <p class="mais">${h.link_to(u"mais dados em destaque", h.url_for(controller='group', action='read', id="dados-em-destaque"))}</p>
         </section>
 
         <section id="new">
-         <h1><span>Notícias</span></h1>
+         <h1><span><a class="mais" href="#">Notícias</a></span></h1>
          <py:for each="link, published_date, title, description in c.articles">
           <article>
           <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
           <p>${description}</p>
           </article>
          </py:for>
-         <p class="mais"><a href="#">saiba mais</a></p>
         </section>
 
         <section id="top_tags">
-          <h1> <span>Dados por etiqueta </span></h1>
+          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class="mais")}</span></h1>
           <ul class="tags clearfix">
            <py:for each="link, tag, count in c.top_tags">
             <li><a href="${link}">${tag} (${count})</a></li>
            </py:for>
           </ul>
-        <p class="mais">${h.link_to(u"mais etiquetas", h.url_for(controller='tag', action='index'))}</p>
         </section>
         
         <section id="top_apps">

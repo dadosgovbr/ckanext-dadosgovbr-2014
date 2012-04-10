@@ -1758,24 +1758,26 @@ body {
     #wrap div[role='main'] #featureddata {
       margin-top: 20px;
       height: 303px; }
-    #wrap div[role='main'] #top_tags .tags {
+    #wrap div[role='main'] #top_tags
+    .tags {
       margin-left: 1em; }
-      #wrap div[role='main'] #top_tags .tags li {
+      #wrap div[role='main'] #top_tags
+      .tags li {
         display: block;
         float: left;
         color: #FFFFFF;
         background-color: #777777;
         padding: 2px 5px;
         margin: 2px 1px; }
-        #wrap div[role='main'] #top_tags .tags li a {
+        #wrap div[role='main'] #top_tags
+        .tags li a {
           color: #FFFFFF;
           text-decoration: none; }
-        #wrap div[role='main'] #top_tags .tags li:hover {
+        #wrap div[role='main'] #top_tags
+        .tags li:hover {
           background-color: #cca300;
           text-decoration: none;
           color: #FFFFFF; }
-      #wrap div[role='main'] #top_tags .tags p.mais {
-        margin-top: -0.8em; }
     #wrap div[role='main'] form#search {
       margin-bottom: 0;
       height: 30px;
@@ -1823,9 +1825,6 @@ body {
         float: right;
         color: gray;
         margin-top: 1em; }
-      #wrap div[role='main'] #new p.mais {
-        border-bottom: none;
-        margin-top: -1.5em; }
     #wrap div[role='main'] #apps {
       background: #ececec;
       border: 1px solid #7d99aa;
@@ -1881,7 +1880,11 @@ body {
           color: inherit;
           font-weight: bold; }
     #wrap div[role='main'] p.mais {
-      float: right; }
+      float: right;
+      margin-top: -2.1em; }
+    #wrap div[role='main'] a.mais, #wrap div[role='main'] a.mais:link, #wrap div[role='main'] a.mais:visited, #wrap div[role='main'] a.mais:hover {
+      color: white;
+      text-decoration: none; }
 
 .footer.outer {
   position: absolute;
