@@ -18,8 +18,8 @@ function resizeText(multiplier) {
   var size = parseFloat(document.body.style.fontSize);
 
   if (!(
-        ((size >= 1.6) && (multiplier > 0)) ||
-        ((size <= 0.5) && (multiplier < 0))
+        ((size >= 1.4) && (multiplier > 0)) ||
+        ((size <= 0.6) && (multiplier < 0))
      )){
     document.body.style.fontSize = size + (multiplier * 0.2) + "em";    
   }
