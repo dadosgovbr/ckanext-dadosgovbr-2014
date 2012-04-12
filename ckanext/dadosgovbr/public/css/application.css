@@ -1891,7 +1891,7 @@ body {
       color: white;
       text-decoration: none; }
 
-.faq-link:hover {
+.faq-link:hover, .faq-link a:hover {
   cursor: help; }
 
 .footer.outer {
