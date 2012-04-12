@@ -498,8 +498,9 @@ body{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 230px;
-    background: url("../img/bg/bg_footer.jpg") 0 0 repeat-x;
+    min-height: 230px;
+    background: url("../img/bg/bg_footer_fill.jpg") 0 0 repeat-x;
+    border-bottom: 1px solid #73aae2;
     color: #FFF;
     a, h3 { color: inherit; }
  
@@ -508,6 +509,7 @@ body{
         width: $sitewidth;
         max-width: $sitewidth;
         margin: 0 auto;
+        background: url("../img/bg/bg_footer.jpg") 0 0 repeat;
 
         padding: 15px 2px 25px;
         @include clearfix;
