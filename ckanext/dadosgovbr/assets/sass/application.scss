@@ -526,6 +526,7 @@ body{
             margin-bottom: 15px;
         }
         #colophon{
+            @include column(12);
             clear:both;
         }
     }
