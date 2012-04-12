@@ -1925,6 +1925,8 @@ body {
           content: "\25B8 \2003"; }
     .footer.outer footer h3 {
       margin-bottom: 15px; }
+    .footer.outer footer #colophon {
+      clear: both; }
 
 #notes-extract p {
   margin-bottom: 1em; }
