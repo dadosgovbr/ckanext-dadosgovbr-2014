@@ -1838,7 +1838,8 @@ body {
       margin-top: 20px;
       float: left;
       margin-left: 20px;
-      width: 940px; }
+      width: 940px;
+      height: 13.077em; }
       #wrap div[role='main'] #apps ul {
         overflow: hidden;
         padding: 20px 30px;
