@@ -1899,16 +1899,19 @@ body {
   left: 0;
   width: 100%;
   min-height: 230px;
-  background: url("../img/bg/bg_footer_fill.jpg") 0 0 repeat-x;
+  background: url("../img/bg/bg_footer_fill.jpg") 0 0 repeat;
   border-bottom: 1px solid #73aae2;
   color: #FFF; }
   .footer.outer a, .footer.outer h3 {
     color: inherit; }
+  .footer.outer .footer.inner {
+    width: 100%;
+    min-height: 230px;
+    background: url("../img/bg/bg_footer.jpg") 0 0 repeat-x; }
   .footer.outer footer {
     width: 980px;
     max-width: 980px;
     margin: 0 auto;
-    background: url("../img/bg/bg_footer.jpg") 0 0 repeat;
     padding: 15px 2px 25px;
     *zoom: 1; }
     .footer.outer footer:before, .footer.outer footer:after {

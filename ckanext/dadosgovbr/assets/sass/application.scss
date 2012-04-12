@@ -499,17 +499,22 @@ body{
     left: 0;
     width: 100%;
     min-height: 230px;
-    background: url("../img/bg/bg_footer_fill.jpg") 0 0 repeat-x;
+    background: url("../img/bg/bg_footer_fill.jpg") 0 0 repeat;
     border-bottom: 1px solid #73aae2;
     color: #FFF;
     a, h3 { color: inherit; }
- 
+    
+    .footer.inner{
+        width: 100%;
+        min-height: 230px;
+        background: url("../img/bg/bg_footer.jpg") 0 0 repeat-x;
+    }
+    
     footer{
 
         width: $sitewidth;
         max-width: $sitewidth;
         margin: 0 auto;
-        background: url("../img/bg/bg_footer.jpg") 0 0 repeat;
 
         padding: 15px 2px 25px;
         @include clearfix;
