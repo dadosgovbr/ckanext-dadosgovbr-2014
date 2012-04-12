@@ -1934,7 +1934,8 @@ body {
       float: left;
       margin-left: 20px;
       width: 940px;
-      clear: both; }
+      clear: both;
+      margin-top: 2em; }
 
 #notes-extract p {
   margin-bottom: 1em; }
