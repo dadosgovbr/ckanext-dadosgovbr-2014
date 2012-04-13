@@ -322,8 +322,12 @@ body{
     }
     
 
-    form#search, #sectiondestaque, #top_apps{
+    form#search, #sectiondestaque{
       @include column(7);
+    }
+
+    #top_apps{
+      @include column(5);
     }
 
     #sectionnoticia, #top_tags{
