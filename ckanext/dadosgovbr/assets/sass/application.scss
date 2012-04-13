@@ -322,7 +322,7 @@ body{
     }
     
 
-    form#search, #sectiondestaque{
+    form#search, #featureddata{
       @include column(7);
     }
 
@@ -330,7 +330,7 @@ body{
       @include column(5);
     }
 
-    #sectionnoticia, #top_tags{
+    #new, #top_tags{
       @include column(5);
     }
 
@@ -338,7 +338,7 @@ body{
       height: 19.077em;
     }
 
-    #sectiondestaque{
+    #featureddata{
       margin-top: 20px;
       height: 23.308em;
     }
@@ -412,7 +412,7 @@ body{
         }
     }
 	
-    #sectionnoticia{
+    #new{
       height: 28.077em;
       margin-top: -42px;
       p{
