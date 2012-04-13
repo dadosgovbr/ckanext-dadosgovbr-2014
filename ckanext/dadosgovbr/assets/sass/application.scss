@@ -11,6 +11,7 @@
 
 @import "grid";
 
+$barheight: 28px;
 $sitewidth: 980px;
 $sectionmargin: 12px;
 $iconsize: 36px;
@@ -56,7 +57,8 @@ body{
 }
 
 #brasil{
-    height: 28px;
+    position: absolute;
+    height: $barheight;
     /*background: #F1D800;*/
     width: 100%;
     text-align: center;
@@ -97,10 +99,10 @@ body{
     width: $sitewidth; // Fix it to responsive
     max-width: $sitewidth;
     background: white;
-    $header-height: 260px;
+    $header-height: 260px + $barheight;
 
     header{
-        background: url("../img/bg/bg_header.png") 0 0 repeat-x;
+        background: url("../img/bg/bg_header.png") 0 $barheight - 2px repeat-x;
         position: absolute;
         left: 0;
         width: 100%;

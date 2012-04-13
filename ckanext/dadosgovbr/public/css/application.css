@@ -1469,6 +1469,7 @@ body {
   width: 980px; }
 
 #brasil {
+  position: absolute;
   height: 28px;
   /*background: #F1D800;*/
   width: 100%;
@@ -1508,11 +1509,11 @@ body {
   #wrap:after {
     clear: both; }
   #wrap header {
-    background: url("../img/bg/bg_header.png") 0 0 repeat-x;
+    background: url("../img/bg/bg_header.png") 0 26px repeat-x;
     position: absolute;
     left: 0;
     width: 100%;
-    height: 260px; }
+    height: 288px; }
     #wrap header > .container {
       width: 980px;
       max-width: 980px;
@@ -1645,7 +1646,7 @@ body {
           text-decoration: none; }
   #wrap div[role='main'] {
     *zoom: 1;
-    margin-top: 280px; }
+    margin-top: 308px; }
     #wrap div[role='main']:before, #wrap div[role='main']:after {
       display: table;
       content: ""; }
