@@ -322,11 +322,11 @@ body{
     }
     
 
-    form#search, #featureddata, #top_apps{
+    form#search, #sectiondestaque, #top_apps{
       @include column(7);
     }
 
-    #new, #top_tags{
+    #sectionnoticia, #top_tags{
       @include column(5);
     }
 
@@ -334,7 +334,7 @@ body{
       height: 19.077em;
     }
 
-    #featureddata{
+    #sectiondestaque{
       margin-top: 20px;
       height: 23.308em;
     }
@@ -408,7 +408,7 @@ body{
         }
     }
 	
-    #new{
+    #sectionnoticia{
       height: 28.077em;
       margin-top: -42px;
       p{
