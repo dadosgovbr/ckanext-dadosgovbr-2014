@@ -328,6 +328,8 @@ body{
 
     #top_apps{
       @include column(5);
+      height: 28.077em;
+      margin-top: -42px;
     }
 
     #new, #top_tags{

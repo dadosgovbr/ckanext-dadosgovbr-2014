@@ -1786,7 +1786,9 @@ body {
     #wrap div[role='main'] #top_apps {
       float: left;
       margin-left: 20px;
-      width: 380px; }
+      width: 380px;
+      height: 28.077em;
+      margin-top: -42px; }
     #wrap div[role='main'] #new, #wrap div[role='main'] #top_tags {
       float: left;
       margin-left: 20px;
