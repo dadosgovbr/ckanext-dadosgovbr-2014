@@ -1856,10 +1856,9 @@ body {
         color: gray;
         margin-top: -0.3em; }
     #wrap div[role='main'] #new {
-      height: 28.077em; }
-      #wrap div[role='main'] #new p {
-        padding-bottom: 4px;
-        border-bottom: 1px solid darkgray; }
+      height: 19.077em p;
+        height-padding-bottom: 4px;
+        height-border-bottom: 1px solid darkgray; }
       #wrap div[role='main'] #new span.datanoticia {
         float: right;
         color: gray;
