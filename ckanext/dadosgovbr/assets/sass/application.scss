@@ -328,7 +328,7 @@ body{
 
     #top_apps{
       @include column(5);
-      height: 28.077em;
+      height: 25.692em;
       margin-top: -42px;
     }
 
@@ -336,13 +336,13 @@ body{
       @include column(5);
     }
 
-    #top_apps,  #top_tags{
+    #top_tags{
       height: 19.077em;
     }
 
     #featureddata{
       margin-top: 20px;
-      height: 23.308em;
+      height: 20.769em;
     }
     
     #top_tags 
@@ -480,7 +480,7 @@ body{
         border: 0;
 
         .tab-content {
-            height: 16.538em;
+            height: 22.923em;
             background: #ECECEC url("../img/bg/bg_boxes.png") 0 0 repeat;
             border: 1px solid #DDD;
             -moz-border-bottom-right-radius: 5px;

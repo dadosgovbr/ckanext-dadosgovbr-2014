@@ -1787,17 +1787,17 @@ body {
       float: left;
       margin-left: 20px;
       width: 380px;
-      height: 28.077em;
+      height: 25.692em;
       margin-top: -42px; }
     #wrap div[role='main'] #new, #wrap div[role='main'] #top_tags {
       float: left;
       margin-left: 20px;
       width: 380px; }
-    #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
+    #wrap div[role='main'] #top_tags {
       height: 19.077em; }
     #wrap div[role='main'] #featureddata {
       margin-top: 20px;
-      height: 23.308em; }
+      height: 20.769em; }
     #wrap div[role='main'] #top_tags
     .tags {
       margin-left: 1em; }
@@ -1910,7 +1910,7 @@ body {
       background: none;
       border: 0; }
       #wrap div[role='main'] #top_apps .tab-content {
-        height: 16.538em;
+        height: 22.923em;
         background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
         border: 1px solid #DDD;
         -moz-border-bottom-right-radius: 5px;
