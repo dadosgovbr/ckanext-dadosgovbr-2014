@@ -322,7 +322,7 @@ body{
     }
     
 
-    form#search, #featureddata{
+    form#search, #featureddata, #new{
       @include column(7);
     }
 
@@ -332,7 +332,7 @@ body{
       margin-top: -42px;
     }
 
-    #new, #top_tags{
+    #top_tags{
       @include column(5);
     }
 
@@ -416,7 +416,6 @@ body{
 	
     #new{
       height: 28.077em;
-      margin-top: -42px;
       p{
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray;
