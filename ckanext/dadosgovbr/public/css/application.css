@@ -1779,17 +1779,21 @@ body {
           color: inherit; }
       #wrap div[role='main'] section p {
         font-size: 1em; }
-    #wrap div[role='main'] form#search, #wrap div[role='main'] #featureddata, #wrap div[role='main'] #top_apps {
+    #wrap div[role='main'] form#search, #wrap div[role='main'] #sectiondestaque {
       float: left;
       margin-left: 20px;
       width: 540px; }
-    #wrap div[role='main'] #new, #wrap div[role='main'] #top_tags {
+    #wrap div[role='main'] #top_apps {
+      float: left;
+      margin-left: 20px;
+      width: 380px; }
+    #wrap div[role='main'] #sectionnoticia, #wrap div[role='main'] #top_tags {
       float: left;
       margin-left: 20px;
       width: 380px; }
     #wrap div[role='main'] #top_apps, #wrap div[role='main'] #top_tags {
       height: 19.077em; }
-    #wrap div[role='main'] #featureddata {
+    #wrap div[role='main'] #sectiondestaque {
       margin-top: 20px;
       height: 23.308em; }
     #wrap div[role='main'] #top_tags
@@ -1849,13 +1853,13 @@ body {
       #wrap div[role='main'] form#search p {
         color: gray;
         margin-top: -0.3em; }
-    #wrap div[role='main'] #new {
+    #wrap div[role='main'] #sectionnoticia {
       height: 28.077em;
       margin-top: -42px; }
-      #wrap div[role='main'] #new p {
+      #wrap div[role='main'] #sectionnoticia p {
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray; }
-      #wrap div[role='main'] #new span.datanoticia {
+      #wrap div[role='main'] #sectionnoticia span.datanoticia {
         float: right;
         color: gray;
         margin-top: 1em; }
