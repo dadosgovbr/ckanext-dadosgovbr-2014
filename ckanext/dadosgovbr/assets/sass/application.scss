@@ -17,8 +17,15 @@ $sectionmargin: 12px;
 $iconsize: 36px;
 
 @mixin menu-button($light-color, $dark-color) {
+    background: mix($light-color, $dark-color);
     background: -moz-linear-gradient(top, $light-color 0%, $dark-color);
-    background: -webkit-gradient(linear, left top, left bottom, from($light-color), to($dark-color));
+    background: -webkit-gradient(linear, left top, left bottom, from($light-color), to($dark-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  $light-color 0%,$dark-color 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  $light-color 0%,$dark-color 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  $light-color 0%,$dark-color 100%); /* IE10+ */
+    background: linear-gradient(left,  $light-color 0%,$dark-color 100%); /* W3C */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$light-color', EndColorStr='$dark-color'); /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$light-color', EndColorStr='$dark-color')"; /* IE8 */
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
