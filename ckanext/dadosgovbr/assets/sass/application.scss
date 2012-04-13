@@ -111,7 +111,7 @@ body{
             width: $sitewidth;
             max-width: $sitewidth;
             height: 100%;
-            margin: 0 auto;
+            margin: $barheight auto 0;
             background: url("../img/bg/bg_header_over.png") 0 0 no-repeat;
         }
         #zoom{
