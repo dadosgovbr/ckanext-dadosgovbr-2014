@@ -21,8 +21,7 @@
         </py:for>
         </section>
 
-
-<section id="top_apps">
+        <section id="top_apps">
           <ul class="nav nav-tabs" id="top_apps_tabs">
             <li class="active">
               <a href="#acessados" data-toggle="tab">+ Acessados </a>
@@ -54,25 +53,6 @@
                 </table>
             </div>
 
-        <section id="top_tags">
-          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class_="mais")}</span></h1>
-          <ul class="tags clearfix">
-           <py:for each="link, tag, count in c.top_tags">
-            <li><a href="${link}">${tag} (${count})</a></li>
-           </py:for>
-          </ul>
-        </section>
-        
-        <section id="new">
-         <h1><span><a class="mais" href="/noticia/">Notícias</a></span></h1>
-         <py:for each="link, published_date, title, description in c.articles">
-          <article>
-          <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
-          <p>${description}</p>
-          </article>
-         </py:for>
-        </section>
-
             <div class="tab-pane" id="recentes">
                 <table class="table table-striped">
                   <thead>
@@ -100,6 +80,25 @@
             $('.nav-tabs a:first').tab('show')
           })
         </script>
+        </section>
+
+        <section id="top_tags">
+          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class_="mais")}</span></h1>
+          <ul class="tags clearfix">
+           <py:for each="link, tag, count in c.top_tags">
+            <li><a href="${link}">${tag} (${count})</a></li>
+           </py:for>
+          </ul>
+        </section>
+        
+        <section id="new">
+         <h1><span><a class="mais" href="/noticia/">Notícias</a></span></h1>
+         <py:for each="link, published_date, title, description in c.articles">
+          <article>
+          <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
+          <p>${description}</p>
+          </article>
+         </py:for>
         </section>
 
         <section id="apps">
