@@ -71,7 +71,7 @@ class DadosGovBrHomeController(HomeController):
             c.articles.append((
                 str(entry.link).replace('/wp/index.php/noticia/','/noticia/'),
                 cls.formata_data(entry.published),
-                cls.limita_tamanho(entry.title, 65),
+                cls.limita_tamanho(entry.title, 60),
                 cls.limita_tamanho(entry.description, 150)
             ))
 
