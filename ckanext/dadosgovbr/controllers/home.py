@@ -8,7 +8,8 @@ from ckan.lib.search import SearchError
 # see: http://mail.python.org/pipermail/python-dev/2006-April/063487.html
 # this is used by datetime.strftime
 import locale
-locale.setlocale(locale.LC_ALL, '')
+#locale.setlocale(locale.LC_ALL,locale.getdefaultlocale())
+locale.setlocale(locale.LC_ALL,('pt_BR', 'UTF8'))
 
 class DadosGovBrHomeController(HomeController):
     """dados.gov.br theme customized home controller
