@@ -1585,6 +1585,8 @@ body {
       width: 100%; }
       #wrap header nav a {
         font-size: 1em; }
+      #wrap header nav #governo {
+        width: 10.769em; }
       #wrap header nav ul.nav {
         float: left;
         margin-left: 20px;
@@ -1881,6 +1883,8 @@ body {
         margin: 0;
         -moz-border-radius: 5px;
         border-radius: 5px; }
+        #wrap div[role='main'] #apps ul #myCarousel {
+          height: 8.615em; }
         #wrap div[role='main'] #apps ul .carousel-inner {
           margin-left: 136px; }
         #wrap div[role='main'] #apps ul li {

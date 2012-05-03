@@ -189,6 +189,9 @@ body{
             a {
                 font-size: 1em;
             }
+			#governo{
+				width: 10.769em;
+			}
             ul.nav{
                 @include column(9);
                 list-style: none;
