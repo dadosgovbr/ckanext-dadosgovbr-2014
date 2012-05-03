@@ -189,9 +189,6 @@ body{
             a {
                 font-size: 1em;
             }
-			#governo{
-				width: 10.769em;
-			}
             ul.nav{
                 @include column(9);
                 list-style: none;
@@ -215,7 +212,7 @@ body{
                 padding: 7px 15px;
                 float: right;
                 @include menu-button(#82c917, #208712);
-                width:10em;
+                width:10.769em;
             }
         }
     }
