@@ -65,17 +65,21 @@ class DadosGovBrHomeController(HomeController):
     
     @classmethod
     def set_news_section(cls):
-        from feedreader.parser import from_url
-        parsed = from_url('http://127.0.0.1/feed')
+        from feedreader.parser import from_url, ParseError
         c.articles = []
-        for entry in parsed.entries[:3]:
-            c.articles.append((
-                str(entry.link).replace('/wp/index.php/noticia/','/noticia/'),
-                cls.formata_data(entry.published),
-                cls.limita_tamanho(entry.title, 60),
-                cls.limita_tamanho(entry.description, 150)
-            ))
-
+        try:
+            parsed = from_url('http://127.0.0.1/feed')
+            for entry in parsed.entries[:3]:
+                c.articles.append((
+                    str(entry.link).replace('/wp/index.php/noticia/','/noticia/'),
+                    cls.formata_data(entry.published),
+                    cls.limita_tamanho(entry.title, 60),
+                    cls.limita_tamanho(entry.description, 150)
+                ))
+        except ParseError:
+            # nao conseguiu ler o feed, deixe a area de noticias vazia
+            pass
+    
     @classmethod
     def set_most_viewed_datasets(cls):
         from ckanext.googleanalytics import dbutil
