@@ -511,7 +511,7 @@ body{
 
 body.index {
     .span9.content-outer {
-        width: auto; // sobrescrever a regra do bootstrap usada pelo CKAN
+        width: 100%; // sobrescrever a regra do bootstrap usada pelo CKAN
     }
 }
 
