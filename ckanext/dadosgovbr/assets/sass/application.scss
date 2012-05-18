@@ -509,8 +509,8 @@ body{
 
 // Regras a serem usadas apenas na página principal
 
-body.index #wrap {
-    .span9 {
+body.index {
+    .span9.content-outer {
         width: auto; // sobrescrever a regra do bootstrap usada pelo CKAN
     }
 }

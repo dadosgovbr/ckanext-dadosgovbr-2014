@@ -1928,7 +1928,7 @@ body {
       color: white;
       text-decoration: none; }
 
-body.index #wrap .span9 {
+body.index .span9.content-outer {
   width: auto; }
 
 .faq-link:hover, .faq-link a:hover {
