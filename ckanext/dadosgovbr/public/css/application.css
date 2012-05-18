@@ -1928,9 +1928,6 @@ body {
       color: white;
       text-decoration: none; }
 
-body.index #wrap span9 {
-  width: auto; }
-
 .faq-link:hover, .faq-link a:hover {
   cursor: help; }
 
