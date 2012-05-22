@@ -2019,3 +2019,6 @@ body.index .span9.content-outer {
 
 .clearfix {
   zoom: 1; }
+
+body.no-sidebar .row .content-outer {
+  width: 960px; }

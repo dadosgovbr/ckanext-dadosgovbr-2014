@@ -588,4 +588,9 @@ body.index {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+//correção na área de edição de datasets
+
+body.no-sidebar .row .content-outer {
+	width: 960px;
+}
 
