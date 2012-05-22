@@ -100,7 +100,7 @@
         <!-- Assunto VCGE -->
         <tr>
           <td class="dataset-label">Assuntos</td>
-          <td class="dataset-details"><span py:for="(name, url) in c.subjects">${h.link_to(name, url, target="_new", rel="dc:subject foaf:primaryTopic")}</span></td>
+          <td class="dataset-details"><span py:for="(name, url) in c.subjects">${h.link_to(name, url, target="_blank", rel="dc:subject foaf:primaryTopic")}</span></td>
         </tr>
         
         <!-- Extra metadata -->
