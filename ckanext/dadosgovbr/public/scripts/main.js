@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
     $('.carousel').carousel();
-    $('.myCarousel').carousel({
+    $('#myCarousel').carousel({
         interval: 2000
     })
     $('#top_apps_tabs').tab('show');
