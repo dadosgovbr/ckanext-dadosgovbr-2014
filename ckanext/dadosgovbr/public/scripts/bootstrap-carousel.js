@@ -83,7 +83,7 @@
         , fallback  = type == 'next' ? 'first' : 'last'
         , that = this
 
-      if (!$next.length) return
+      //if (!$next.length) return
 
       this.sliding = true
 
