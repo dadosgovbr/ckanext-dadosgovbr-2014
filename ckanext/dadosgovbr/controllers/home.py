@@ -114,7 +114,7 @@ class DadosGovBrHomeController(HomeController):
             (
                 g.site_url+'tag/'+result['name'],
                 result['name'],
-                len(result['packages'])
+                len(result.get('packages', []))
             ) for result in results ]
         c.top_tags = sorted(tags, key=lambda result: result[2], reverse=True)[:tag_limit]
 
