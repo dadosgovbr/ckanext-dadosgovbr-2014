@@ -1931,7 +1931,7 @@ body {
 body.index .span9.content-outer {
   width: 100%; }
 
-..faq-link:hover, .faq-link a:hover {
+.faq-link:hover, .faq-link a:hover {
   cursor: help; }
 
 .footer.outer {
@@ -1980,8 +1980,8 @@ body.index .span9.content-outer {
 #notes-extract p {
   margin-bottom: 1em; }
 #notes-extract ul {
-  margin-left: 2em;
- 
+  margin-left: 2em; }
+
 .hidden {
   display: none;
   visibility: hidden; }
@@ -2018,4 +2018,4 @@ body.index .span9.content-outer {
   clear: both; }
 
 .clearfix {
-  zoom: 1; }}
+  zoom: 1; }
