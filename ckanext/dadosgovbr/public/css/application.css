@@ -1893,7 +1893,8 @@ body {
           margin-top: 0px;
           text-align: center; }
           #wrap div[role='main'] #apps ul li h2 {
-            font-weight: 700; }
+            font-weight: 700;
+            margin-bottom: 5px; }
           #wrap div[role='main'] #apps ul li img {
             width: 107px;
             height: 110px;
