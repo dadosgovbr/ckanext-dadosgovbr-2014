@@ -1887,8 +1887,9 @@ body {
         #wrap div[role='main'] #apps ul .carousel-inner {
           margin-left: 136px; }
         #wrap div[role='main'] #apps ul li {
-          /**@include column(4);**/
-          width: 200px;
+          float: left;
+          margin-left: 20px;
+          width: 220px;
           margin-top: 0px; }
           #wrap div[role='main'] #apps ul li h2 {
             font-weight: 700; }

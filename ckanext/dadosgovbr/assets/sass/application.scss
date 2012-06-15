@@ -450,8 +450,7 @@ body{
             margin-left: 136px;
         }
         li{
-          /**@include column(4);**/
-		  width:200px;
+          @include column(3);
           margin-top: 0px;
           h2{
             font-weight: 700;
