@@ -450,13 +450,10 @@ body{
             margin-left: 136px;
         }
         li{
-          @include column(4);
+          /**@include column(4);**/
+		  width:200px;
           margin-top: 0px;
           h2{
-            margin: 0 {
-              top: 20px;
-              bottom: 10px;
-            }
             font-weight: 700;
           }
           img{

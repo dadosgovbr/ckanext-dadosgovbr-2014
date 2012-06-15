@@ -1887,14 +1887,10 @@ body {
         #wrap div[role='main'] #apps ul .carousel-inner {
           margin-left: 136px; }
         #wrap div[role='main'] #apps ul li {
-          float: left;
-          margin-left: 20px;
-          width: 300px;
+          /**@include column(4);**/
+          width: 200px;
           margin-top: 0px; }
           #wrap div[role='main'] #apps ul li h2 {
-            margin: 0;
-              margin-top: 20px;
-              margin-bottom: 10px;
             font-weight: 700; }
           #wrap div[role='main'] #apps ul li img {
             width: 107px;
