@@ -1890,13 +1890,13 @@ body {
           float: left;
           margin-left: 20px;
           width: 220px;
-          margin-top: 0px; }
+          margin-top: 0px;
+          text-align: center; }
           #wrap div[role='main'] #apps ul li h2 {
             font-weight: 700; }
           #wrap div[role='main'] #apps ul li img {
             width: 107px;
             height: 110px;
-            float: left;
             margin-right: 10px;
             background: #3AAA35; }
           #wrap div[role='main'] #apps ul li p {

@@ -452,13 +452,13 @@ body{
         li{
           @include column(3);
           margin-top: 0px;
+		  text-align: center;
           h2{
             font-weight: 700;
           }
           img{
             width: 107px;
             height: 110px;
-            float: left;
             margin-right: 10px;
             background: #3AAA35;
           }
