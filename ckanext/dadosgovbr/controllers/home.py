@@ -140,7 +140,7 @@ class DadosGovBrHomeController(HomeController):
                 cls.limita_tamanho(result['notes'],155),
             )
             for result in results]
-	    c.featured_datasets.insert(0, (g.site_url + 'dataset/cadastro-nacional-de-reclamacoes-fundamentadas-procons-sindec',u'Cadastro Nacional de Reclamações Fundamentadas (PROCONS - Sindec)',u'O Sistema Nacional de Informações de Defesa do Consumidor – Sindec é um sistema informatizado que integra processos e procedimentos, relativos ao ...' ))
+        c.featured_datasets.insert(0, (g.site_url + 'dataset/cadastro-nacional-de-reclamacoes-fundamentadas-procons-sindec',u'Cadastro Nacional de Reclamações Fundamentadas (PROCONS - Sindec)',u'O Sistema Nacional de Informações de Defesa do Consumidor – Sindec é um sistema informatizado que integra processos e procedimentos, relativos ao ...' ))
 
     @classmethod
     def set_most_recent_datasets(cls):
