@@ -130,7 +130,7 @@ class DadosGovBrHomeController(HomeController):
                    'user': c.user or c.author}
         
         data_dict = {'id': 'dados-em-destaque'}
-        results = deepcopy(get_action('group_package_show')(context,data_dict))
+        results = deepcopy(get_action('group_list')(context,data_dict))
         shuffle(results)
         results = results[:3]
         c.featured_datasets = [
