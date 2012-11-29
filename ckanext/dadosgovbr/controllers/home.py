@@ -130,17 +130,16 @@ class DadosGovBrHomeController(HomeController):
                    'user': c.user or c.author}
         
         data_dict = {'id': 'dados-em-destaque'}
-        results = deepcopy(get_action('group_package_show')(context,data_dict))
+        slugs = deepcopy(get_action('group_show')(context,data_dict)['packages'])
         shuffle(results)
-        results = results[:2]
+        slugs = slugs[:3]
         c.featured_datasets = [
             (
                 g.site_url+'dataset/'+result['name'],
-                cls.limita_tamanho(result['title'],70),
-                cls.limita_tamanho(result['notes'],155),
+                #cls.limita_tamanho(result['title'],70), # TODO: consultar a partir do slug
+                #cls.limita_tamanho(result['notes'],155), # TODO: consultar a partir do slug
             )
             for result in results]
-        c.featured_datasets.insert(0, (g.site_url + 'dataset/cadastro-nacional-de-reclamacoes-fundamentadas-procons-sindec',u'Cadastro Nacional de Reclamações Fundamentadas (PROCONS - Sindec)',u'O Sistema Nacional de Informações de Defesa do Consumidor – Sindec é um sistema informatizado que integra processos e procedimentos, relativos ao ...' ))
 
     @classmethod
     def set_most_recent_datasets(cls):
