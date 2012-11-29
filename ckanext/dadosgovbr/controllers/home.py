@@ -131,7 +131,7 @@ class DadosGovBrHomeController(HomeController):
         
         data_dict = {'id': 'dados-em-destaque'}
         slugs = deepcopy(get_action('group_show')(context,data_dict)['packages'])
-        shuffle(results)
+        shuffle(slugs)
         slugs = slugs[:3]
         c.featured_datasets = []
         for slug in slugs:
