@@ -138,8 +138,8 @@ class DadosGovBrHomeController(HomeController):
             c.featured_datasets.append(
                 (
                 g.site_url+'dataset/'+package['name'],
-                package['title'],
-                package['notes'],
+                cls.limita_tamanho(package['title'],70),
+                cls.limita_tamanho(package['notes'],155),
                 )
             )
 
