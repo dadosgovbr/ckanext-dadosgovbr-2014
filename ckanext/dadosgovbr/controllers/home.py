@@ -133,13 +133,17 @@ class DadosGovBrHomeController(HomeController):
         slugs = deepcopy(get_action('group_show')(context,data_dict)['packages'])
         shuffle(results)
         slugs = slugs[:3]
-        c.featured_datasets = [
-            (
-                g.site_url+'dataset/'+result['name'],
-                #cls.limita_tamanho(result['title'],70), # TODO: consultar a partir do slug
-                #cls.limita_tamanho(result['notes'],155), # TODO: consultar a partir do slug
+        c.featured_datasets = []
+        for slug in slugs:
+            data_dict = {'name_or_id':slug}
+            package = deepcopy(get_action('package_show')(context,data_dict))
+            c.featured_datasets.append(
+                (
+                g.site_url+'dataset/'+slug,
+                package['title'],
+                package['description'],
+                )
             )
-            for result in results]
 
     @classmethod
     def set_most_recent_datasets(cls):
