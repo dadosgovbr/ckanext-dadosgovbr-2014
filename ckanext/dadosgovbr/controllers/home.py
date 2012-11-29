@@ -130,18 +130,16 @@ class DadosGovBrHomeController(HomeController):
                    'user': c.user or c.author}
         
         data_dict = {'id': 'dados-em-destaque'}
-        slugs = deepcopy(get_action('group_show')(context,data_dict)['packages'])
-        shuffle(slugs)
-        slugs = slugs[:3]
+        packages = deepcopy(get_action('group_show')(context,data_dict)['packages'])
+        shuffle(packages)
+        packages = packages[:3]
         c.featured_datasets = []
-        for slug in slugs:
-            data_dict = {'name_or_id':slug}
-            package = deepcopy(get_action('package_show')(context,data_dict))
+        for package in packages:
             c.featured_datasets.append(
                 (
-                g.site_url+'dataset/'+slug,
+                g.site_url+'dataset/'+package['name'],
                 package['title'],
-                package['description'],
+                package['notes'],
                 )
             )
 
