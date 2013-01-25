@@ -1509,7 +1509,7 @@ body {
   #wrap:after {
     clear: both; }
   #wrap header {
-    background: url("../img/bg/bg_header.png") 0 26px repeat-x;
+    background: url("../img/bg/bg_header.png") 0 0 repeat-x;
     position: absolute;
     left: 0;
     width: 100%;

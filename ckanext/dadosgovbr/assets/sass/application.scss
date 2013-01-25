@@ -109,7 +109,7 @@ body{
     $header-height: 260px + $barheight;
 
     header{
-        background: url("../img/bg/bg_header.png") 0 $barheight - 2px repeat-x;
+        background: url("../img/bg/bg_header.png") 0 0 repeat-x;
         position: absolute;
         left: 0;
         width: 100%;
