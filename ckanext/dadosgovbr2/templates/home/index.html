@@ -1,0 +1,173 @@
+<html xmlns:py="http://genshi.edgewall.org/"
+  xmlns:i18n="http://genshi.edgewall.org/i18n"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  py:strip="">
+  
+  <py:def function="page_title">Welcome</py:def>
+  <div py:match="//div[@id='content']" class="front-page" id="content">
+
+        <form action="${h.url_for(controller='package', action='search')}" id="search" method="GET">
+          <input class="search-field" name="q" type="text" placeholder="Pesquisa ..." id="busca" />
+          <input type="submit" alt="buscar" value="Pesquisar" id="btnbusca" />
+          <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos <span class="faq-link"><a href="/faq/#q10">(o que é isto?)</a></span></p>
+        </form>
+        <section id="featureddata">
+          <h1> <span>${h.link_to(u"Dados em destaque", h.url_for(controller='group', action='read', id='dados-em-destaque'), class_="mais")}</span> </h1>
+        <py:for each="link, title, notes in c.featured_datasets">
+          <article>
+          <h2><a href="${link}">${title}‎</a></h2>
+          <p>${notes}</p>
+          </article>
+        </py:for>
+        </section>
+
+        <section id="top_apps">
+          <ul class="nav nav-tabs" id="top_apps_tabs">
+            <li class="active">
+              <a href="#acessados" data-toggle="tab">+ Acessados </a>
+            </li>
+            <li>
+              <a href="#recentes" data-toggle="tab">+ Recentes </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="acessados">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Mês</th>
+                      <th>Totais</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <py:for each="package_short, package, recent, ever in c.top_packages">
+                      <tr>
+                        <td>${h.link_to(package_short or package.name, h.url_for(controller='package', action='read', id=package.name), title=package.title)}
+                        </td>
+                        <td>${recent}</td>
+                        <td>${ever}</td>
+                      </tr>
+                   </py:for>
+                  </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="recentes">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Organização</th>
+                      <th>Quando</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <py:for each="link, title_short, title, author_short, author, time_ago, timestamp in c.most_recent_datasets">
+                      <tr>
+                        <td><a href="${link}" title="${title}">${title_short}</a></td>
+                        <td title="${author}">${author_short}</td>
+                        <td title="${timestamp}">${time_ago}</td>
+                      </tr>
+                    </py:for>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+          $(function () {
+            $('.nav-tabs a:first').tab('show')
+          })
+        </script>
+        </section>
+
+        <section id="top_tags">
+          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class_="mais")}</span></h1>
+          <ul class="tags clearfix">
+           <py:for each="link, tag, count in c.top_tags">
+            <li><a href="${link}">${tag} (${count})</a></li>
+           </py:for>
+          </ul>
+        </section>
+        
+        <section id="new">
+         <h1><span><a class="mais" href="/noticia/">Notícias</a></span></h1>
+         <py:for each="link, published_date, title, description in c.articles">
+          <article>
+          <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
+          <p>${description}</p>
+          </article>
+         </py:for>
+        </section>
+
+        <section id="apps">
+          <ul>
+            <div id="myCarousel" class="carousel">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item">
+                    <li>
+                      <h2> Reputação S. A. </h2>
+                      <a href="http://reputacao-sa.org/" target="_blank"><img src="/img/app/reputacao-sa110px.png" alt="aplicativo reputação S.A." /></a>
+                    </li>
+                    <li>
+                      <h2> Para onde foi o meu dinheiro </h2>
+                      <a href="http://www.paraondefoiomeudinheiro.com.br/" target="_blank"><img src="/img/app/meudinheiro110px.png" alt="aplicativo para onde foi o meu dinheiro" /></a>
+                    </li>
+                    <li>
+                      <h2> Reclamações Procon </h2>
+                      <a href="http://www.reclamacoesprocon.com.br/" target="_blank"><img src="/img/app/reclamacoes-procon110px.png" alt="aplicativo reclamações procon" /></a>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                      <h2> Painel do PAC </h2>
+                      <a href="http://www.it4biz.com.br/apps/dados.gov.br/obrasdopac/" target="_blank"><img src="/img/app/dashboardobraspac110px.png" alt="dashboard das obras do PAC" /></a>
+                    </li>
+                    <li>
+                      <h2> Reclamações BR </h2>
+                      <a href="http://reclamacoes-br.herokuapp.com/" target="_blank"><img src="/img/app/reclamacoes-br110px.jpg" alt="aplicativo reclamações BR" /></a>
+                    </li>
+                    <li>
+                      <h2> Aeroportos Brasil </h2>
+                      <a href="http://ison.stratebi.es/aerobrasil/" target="_blank"><img src="/img/app/aeroportosbrasil110px.png" alt="Movimento de aeronaves e passageiros nos aeroportos" /></a>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                      <h2> Siga seu vereador </h2>
+                      <a href="http://www.vereadores.org/" target="_blank"><img src="/img/app/vereadores110px.png" alt="Linha do tempo dos vereadores" /></a>
+                    </li>
+                    <li>
+                      <h2> Radar Parlamentar </h2>
+                      <a href="http://radarparlamentar.polignu.org/" target="_blank"><img src="/img/app/radarparlamentar110px.png" alt="Semelhanças entre partidos na atuação parlamentar" /></a>
+                    </li>
+                    <li>
+                      <h2> Fala, Câmara </h2>
+                      <a href="http://lucasnemeth.pythonanywhere.com/" target="_blank"><img src="/img/app/falacamara110px.png" alt="Visualização das ementas e registros de sessões da Câmara Municipal de São Paulo" /></a>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                      <h2> Basômetro </h2>
+                      <a href="http://estadaodados.com/basometro/" target="_blank"><img src="/img/app/basometro110px.png" alt="Apoio dos parlamentares ao governo" /></a>
+                    </li>
+                </div>
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+            </div>
+          </ul>
+          <p class="mais" style="padding-top: 0.4em;">
+          	Aplicativos criados pela sociedade. <a href="/aplicativos/">Mais aplicativos</a>
+          </p>
+        </section>
+
+  </div>
+  <py:match path="//div[@id='footerscripts']">
+  </py:match>
+  <xi:include href="layout.html" />
+</html>
+

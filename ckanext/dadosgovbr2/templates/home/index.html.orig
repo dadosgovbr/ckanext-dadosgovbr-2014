@@ -1,0 +1,148 @@
+<html xmlns:py="http://genshi.edgewall.org/"
+  xmlns:i18n="http://genshi.edgewall.org/i18n"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  py:strip="">
+  
+  <py:def function="page_title">Welcome</py:def>
+  <div py:match="//div[@id='content']" class="front-page" id="content">
+
+        <form action="${h.url_for(controller='package', action='search')}" id="search" method="GET">
+          <input class="search-field" name="q" type="text" placeholder="Pesquisa ..." id="busca" />
+          <input type="submit" alt="buscar" value="Pesquisar" id="btnbusca" />
+          <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos <span class="faq-link"><a href="/faq/#q10">(o que é isto?)</a></span></p>
+        </form>
+        <section id="featureddata">
+          <h1> <span>${h.link_to(u"Dados em destaque", h.url_for(controller='group', action='read', id='dados-em-destaque'), class_="mais")}</span> </h1>
+        <py:for each="link, title, notes in c.featured_datasets">
+          <article>
+          <h2><a href="${link}">${title}‎</a></h2>
+          <p>${notes}</p>
+          </article>
+        </py:for>
+        </section>
+
+        <section id="top_apps">
+          <ul class="nav nav-tabs" id="top_apps_tabs">
+            <li class="active">
+              <a href="#acessados" data-toggle="tab">+ Acessados </a>
+            </li>
+            <li>
+              <a href="#recentes" data-toggle="tab">+ Recentes </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="acessados">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Mês</th>
+                      <th>Totais</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <py:for each="package_short, package, recent, ever in c.top_packages">
+                      <tr>
+                        <td>${h.link_to(package_short or package.name, h.url_for(controller='package', action='read', id=package.name), title=package.title)}
+                        </td>
+                        <td>${recent}</td>
+                        <td>${ever}</td>
+                      </tr>
+                   </py:for>
+                  </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="recentes">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Conjunto de dados</th>
+                      <th>Organização</th>
+                      <th>Quando</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <py:for each="link, title_short, title, author_short, author, time_ago, timestamp in c.most_recent_datasets">
+                      <tr>
+                        <td><a href="${link}" title="${title}">${title_short}</a></td>
+                        <td title="${author}">${author_short}</td>
+                        <td title="${timestamp}">${time_ago}</td>
+                      </tr>
+                    </py:for>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+          $(function () {
+            $('.nav-tabs a:first').tab('show')
+          })
+        </script>
+        </section>
+
+        <section id="top_tags">
+          <h1> <span>${h.link_to(u"Dados por etiqueta", h.url_for(controller='tag', action='index'), class_="mais")}</span></h1>
+          <ul class="tags clearfix">
+           <py:for each="link, tag, count in c.top_tags">
+            <li><a href="${link}">${tag} (${count})</a></li>
+           </py:for>
+          </ul>
+        </section>
+        
+        <section id="new">
+         <h1><span><a class="mais" href="/noticia/">Notícias</a></span></h1>
+         <py:for each="link, published_date, title, description in c.articles">
+          <article>
+          <span class="datanoticia">${published_date}</span><h2><a href="${link}">${title}</a></h2>
+          <p>${description}</p>
+          </article>
+         </py:for>
+        </section>
+
+        <section id="apps">
+          <ul>
+            <div id="myCarousel" class="carousel">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item">
+                    <li>
+                      <a href="http://www.paraondefoiomeudinheiro.com.br/"><img src="/img/app/meudinheiro110px.png" alt="aplicativo para onde foi o meu dinheiro" /></a>
+                      <h2> Para onde foi o meu dinheiro </h2>
+                      <p> Como seus impostos são gastos </p>
+                    </li>
+                    <li>
+                      <a href="http://api.dataprev.gov.br/doc/visualizacao-mapa.html"><img src="/img/app/acidentes110px.png" alt="aplicativo de visualização dos acidentes de trabalho no Brasil" /></a>
+                      <h2> Acidentes de trabalho </h2>
+                      <p> Dados anuais dos acidentes de Trabalho no Brasil</p>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                      <a href="http://ondeacontece.com.br/seguranca/RS/"><img src="/img/app/ondeacontece110px.png" alt="aplicativo onde acontece" /></a>
+                      <h2> Onde acontece </h2>
+                      <p> Dados de criminalidade do estado do Rio Grande do Sul </p>
+                    </li>
+                    <li>
+                      <a href="http://api.comprasnet.gov.br/sicaf/app/painel.htm"><img src="/img/app/fornecedores110px.png" alt="aplicativo de visualização de fornecedores do governo federal" /></a>
+                      <h2> Fornecedores do governo </h2>
+                      <p> Recadastramento dos fornecedores do governo federal </p>
+                    </li>
+                </div>
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+          </ul>
+          <p class="mais"><a href="/aplicativos/">mais aplicativos</a></p>
+        </section>
+
+  </div>
+  <py:match path="//body/script">
+   teste
+  </py:match>
+  <xi:include href="layout.html" />
+</html>
+
