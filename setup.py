@@ -23,7 +23,7 @@ setup(
 		# -*- Extra requirements: -*-
         'feedreader',
         # dateutil version 2.0 is incompatible with feedreader
-        'python-dateutil==1.4.1',
+        'python-dateutil==1.5',
 	],
 	entry_points=\
 	"""
