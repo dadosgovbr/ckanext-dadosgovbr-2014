@@ -18,71 +18,60 @@
     <header py:match="//div[@class='header outer']">
         <div id="barra-brasil"><a href="http://brasil.gov.br" style="background:#7F7F7F; height: 20px; padding:4px 0 4px 10px; display: block; font-family:sans,sans-serif; text-decoration:none; color:white; ">Portal do Governo Brasileiro</a></div>
         <div class="container">
+                <ul id="accessibility">
+					<li>
+						<a id="link-conteudo" href="#content" accesskey="1">
+							Ir para o conteúdo
+							<span>1</span>
+						</a>
+					</li>
+					<li>
+						<a id="link-navegacao" href="#menu-horizontal" accesskey="2">
+							Ir para o menu
+							<span>2</span>
+						</a>
+					</li>
+					<li>
+						<a id="link-buscar" href="#search" accesskey="3">
+							Ir para a busca
+							<span>3</span>
+						</a>
+					</li>
+					<li>
+						<a id="link-rodape" href="#footer" accesskey="4">
+							Ir para o rodapé
+							<span>4</span>
+						</a>
+					</li>
+				</ul>
             <a class="visuallyhidden" href="#content">Pular para conteúdo</a>
             <div id="zoom">
               <a href="#" onclick="resizeText(1)" >A+</a>
               <a href="#" onclick="resizeText(-1)">A-</a>
             </div>
-            <h1 id="site_logo"><a href="/">dados.gov.br</a></h1>
+            <h1 id="site_logo">
+                <a href="/">
+                    <span id="portal-type">Portal Brasileiro de</span>
+                    <span id="portal-title">Dados Abertos</span>
+                    <span id="portal-description">Governo Federal</span>
+                </a>
+            </h1>
             
               <ul id="news">
                   <li id="feed"><a rel="feed" href="/feed/" title="Inscrever-se no feed de notícias">feed</a></li>
                   <li id="twitter"><a href="http://twitter.com/dadosgovbr" title="Microblog no Twitter">twitter</a></li>
                   <li id="identica"><a href="http://identi.ca/dadosgovbr" title="Microblog no identica">identica</a></li>
               </ul>
-            
             <nav>
-              <ul class="nav pills">
-                <li class="dropdown" id="menu1">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1"> Dados 
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/dataset">Catálogo</a></li>
-                    <li><a href="/outras-iniciativas/">Outras iniciativas</a></li>
-                    <li><a href="http://i3gov.planejamento.gov.br/" title="séries históricas"> Indicadores de governo </a></li>
-                    <li><a href="/dados-abertos/" title="o que são dados abertos"> O que são dados abertos </a></li>
-                  </ul>
-                </li>
-                <li class="dropdown" id="menu2">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2"> Participe 
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/sugira-dados/">Sugira Dados</a></li>
-                    <li><a href="/agenda/">Agenda</a></li>
-                    <li><a href="/comunidade/">Comunidade</a></li>
-                    <li><a href="/ferramentas-colaboracao/">Ferramentas de colaboração</a></li>
-                    <li><a href="/contato/">Sugestões</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown" id="menu3">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3"> Aplicativos 
-                    <b class="caret"></b>
-                  </a>
-
-                  <ul class="dropdown-menu">
-                    <li><a href="/aplicativos/">Disponíveis</a></li>
-                    <li><a href="/aplicativos/envie/">Envie o seu</a></li>
-                  </ul>
-
-                </li>
-                <li class="dropdown" id="menu4">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#menu4"> Institucional 
-                    <b class="caret"></b>
-                  </a>
-
-                  <ul class="dropdown-menu">
-                    <li><a href="/sobre/">Sobre o portal</a></li>
-                    <li><a href="/faq/">Perguntas frequentes</a></li>
-                    <li><a href="/cadastrar-organizacao/">Catalogue seus dados</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="/contato/"> Contato </a>
-                </li>
-              </ul>
-              <a href="/governo/" id="governo"> Como incluir dados ? </a>
+                <div id="menu-horizontal">
+                    <ul class="barra-apoio">
+                        <li class="first"><a href="/dataset/">Cat&aacute;logo</a></li>
+                        <li><a href="/sobre/">Sobre o portal</a></li>
+                        <li><a href="/faq/">Perguntas frequentes</a></li>
+                        <li><a href="/contato/"> Contatos </a></li>
+                        <!--<li><a href="/governo/"> Como incluir dados ? </a></li>-->
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -90,9 +79,16 @@
     <div py:match="//div[@class='footer outer']>" py:attrs="select('@*')">
       <div class="footer inner">
         <footer>
+        <div id="footer"></div>
         <div id="portal">
           <h3> O Portal </h3>
           <ul>
+            <li>
+              <a href="/dataset/"> Cat&aacute;logo </a>
+            </li>
+            <li>
+              <a href="/cadastrar-organizacao/"> Catalogue seus dados </a>
+            </li>
             <li>
               <a href="/mapa-do-site/"> Mapa do site </a>
             </li>
@@ -114,6 +110,9 @@
           <h3> Comunidade </h3>
           <ul>
             <li>
+              <a href="/comunidade/"> Comunidades </a>
+            </li>
+            <li>
               <a target="_blank" href="http://twitter.com/dadosgovbr"> Twitter </a>
             </li>
             <li>
@@ -123,10 +122,19 @@
               <a target="_blank" href="http://groups.google.com/group/lista-inda-gt3"> Lista de discussão </a>
             </li>
             <li>
-              <a href="/revision/list"> Últimas alterações </a>
+              <a href="/ferramentas-colaboracao/"> Ferramentas de colabora&ccedil;&atilde;o </a>
+            </li>
+            <li>
+              <a href="/revision/list"> &Uacute;ltimas alterações </a>
+            </li>
+            <li>
+              <a href="/sugira-dados/"> Sugira dados </a>
             </li>
             <li>
               <a href="/agenda/"> Agenda </a>
+            </li>
+            <li>
+              <a href="/contato/"> Sugest&otilde;es </a>
             </li>
           </ul>
         </div>
@@ -177,6 +185,12 @@
             <li>
               <a target="_blank" href="http://www.opengovpartnership.org/"> Parceria para Governo Aberto </a>
             </li>
+            <li>
+              <a href="/outras-iniciativas/"> Outras iniciativas </a>
+            </li>
+            <li>
+              <a target="_blank" href="http://i3gov.planejamento.gov.br/"> Indicadores de governo </a>
+            </li>
           </ul>
         </div>
         <div id="colophon">
@@ -191,9 +205,32 @@
         <br />
         Site desenvolvido para Firefox, Internet Explorer e Google Chrome, versões a partir de 3.6, 9 e 10, respectivamente.
         </div>
+        <div id="acesso-brasil-rodape">
+                    <a href="http://www.acessoainformacao.gov.br/" class="logo-acesso">
+                        <img src="/img/acesso-a-informacao.png" alt="Acesso a Informação"/>
+                    </a>
+                    <a href="http://www.brasil.gov.br/" id="logo-brasil">
+                        <img src="/img/brasil.png" alt="Brasil - Governo Federal"/>
+                    </a>
+        </div>
         </footer>
       </div>
     </div>
-
+<!-- Piwik -->
+<script type="text/javascript"> 
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://161.148.20.44/stats/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://161.148.20.44/stats/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Code -->
   <xi:include href="layout_base.html" />
 </html>
+
