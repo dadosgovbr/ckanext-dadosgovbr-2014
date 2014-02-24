@@ -50,12 +50,11 @@ class DadosGovBrHomeController(HomeController):
             context = {'model': model, 'session': model.Session,
                        'user': c.user or c.author}
             data_dict = {
-                'q':'*:*',
+                'query':{},
                 'facet.field':g.facets,
                 'offset':0,
                 'limit':0,
                 'order_by': None,
-                'query': {},
             }
             query = ckan.logic.get_action('resource_search')(context,data_dict)
             c.resource_count = query['count']
@@ -82,13 +81,13 @@ class DadosGovBrHomeController(HomeController):
     
     @classmethod
     def set_most_viewed_datasets(cls):
-        from ckanext.googleanalytics import dbutil
+        #from ckanext.googleanalytics import dbutil
         tamanho = 58
         c.top_packages = []
-        for package, recent, ever in dbutil.get_top_packages(limit=5):
-            if getattr(package, "title", False):
-                package_short = cls.limita_tamanho(package.title, tamanho)
-            c.top_packages.append((package_short, package, recent, ever))
+        #for package, recent, ever in dbutil.get_top_packages(limit=5):
+        #    if getattr(package, "title", False):
+        #        package_short = cls.limita_tamanho(package.title, tamanho)
+        #    c.top_packages.append((package_short, package, recent, ever))
 
         # Enable to set resources variable, don't forget to enable it on template too!
         #c.top_resources = dbutil.get_top_resources(limit=10)
