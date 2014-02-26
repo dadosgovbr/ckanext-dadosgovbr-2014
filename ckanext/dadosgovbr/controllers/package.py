@@ -5,10 +5,10 @@ from pylons import config
 
 from ckan.logic import get_action, check_access
 from ckan.lib.helpers import date_str_to_datetime
-from ckan.logic import NotFound, NotAuthorized, ValidationError
-from ckan.lib.base import request, c, BaseController, model, abort, h, g, render
+from ckan.logic import NotFound, NotAuthorized
+from ckan.lib.base import request, _, c, BaseController, model, abort, h, g, render
 from ckan.lib.base import response, redirect, gettext
-from ckan.lib.package_saver import PackageSaver, ValidationException
+from ckan.lib.package_saver import PackageSaver
 from ckan.lib.helpers import json
 import ckan.logic.action.get
 
@@ -21,7 +21,8 @@ class DadosGovBrDatasetController(PackageController):
     def read(self, id, format='html'):
         # Check we know the content type, if not then it is likely a revision
         # and therefore we should merge the format onto the end of id
-        ctype,extension,loader = self._content_type_for_format(format)
+        #ctype,extension,loader = self._content_type_for_format(format)
+        ctype = extension = None
         if not ctype:
             # Reconstitute the ID if we don't know what content type to use
             ctype = "text/html; charset=utf-8"
@@ -95,5 +96,6 @@ class DadosGovBrDatasetController(PackageController):
         template = self._read_template( package_type )
         template = template[:template.index('.')+1] + format
 
-        return render( template, loader_class=loader)
+        #return render( template, loader_class=loader)
+        return render( template)
 
