@@ -72,14 +72,14 @@ class DadosGovBrDatasetController(PackageController):
         extras = c.pkg.extras
         subject = extras.get("VCGE", None)
         vcge_re = r"([^[]+)\s*\[(http://[^[\]]+)\]\s?[,;]?\s?"
-        c.subjects = []
+        c.pkg_dict["subjects"] = []
         if subject:
             for name, url in re.findall(vcge_re, subject):
-                c.subjects.append((name,url))
-            try:
-                del c.pkg.extras["VCGE"]
-            except KeyError:
-                pass
+                c.pkg_dicti["subjects"].append((name,url))
+            #try:
+            #    del c.pkg_dict.extras["VCGE"]
+            #except KeyError:
+            #    pass
         
         # used by disqus plugin
         c.current_package_id = c.pkg.id
