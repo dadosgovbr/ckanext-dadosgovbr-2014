@@ -19,12 +19,12 @@
         <!-- plugin dados.gov.br -->
         {% if pkg_dict.subjects %}
           <tr>
-            <th scope="row" class="dataset-label">Assunto</th>
+            <th scope="row" class="dataset-label">Assuntos</th>
             <td class="dataset-details">
               <ul>
                 {% for subject in pkg_dict.subjects %}
                   {% set name, url = subject %}
-                  <li property="dc:subject foaf:primaryTopic">{{ name }}</li>
+                  <li property="dc:subject foaf:primaryTopic">{{ h.link_to(name,url) }}</li>
                 {% endfor %}
               </ul>
             </td>
