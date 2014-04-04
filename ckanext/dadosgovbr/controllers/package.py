@@ -75,9 +75,9 @@ class DadosGovBrDatasetController(PackageController):
         c.pkg_dict["subjects"] = []
         if subject:
             for name, url in re.findall(vcge_re, subject):
-                c.pkg_dicti["subjects"].append((name,url))
+                c.pkg_dict["subjects"].append((name,url))
             #try:
-            #    del c.pkg_dict.extras["VCGE"]
+            #    del c.pkg_dict["extras"]["VCGE"]
             #except KeyError:
             #    pass
         
