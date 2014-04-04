@@ -2,3 +2,7 @@ syntax: glob
 
 *~
 .sass-cache
+build/*
+dist/*
+*.pyc
+*.egg-info
