@@ -1,0 +1,2 @@
+recursive-include ckanext/dadosgovbr/templates *.html
+recursive-include ckanext/dadosgovbr/templates_legacy *.html
