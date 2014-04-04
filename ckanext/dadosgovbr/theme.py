@@ -1,6 +1,7 @@
 import os
 from ckan.plugins import implements, SingletonPlugin
 from ckan.plugins import IConfigurer
+import ckan.plugins.toolkit
 
 class DadosGovBrTheme(SingletonPlugin):
     '''The theme for the dados.gov.br site.
@@ -28,6 +29,10 @@ class DadosGovBrTheme(SingletonPlugin):
                 'public')
         template_dir = os.path.join(rootdir, 'ckanext', 'dadosgovbr',
                 'templates')
+        
+        # use new style plugin toolkit
+        plugins.toolkit.add_public_directory(config, 'public')
+        plugins.toolkit.add_resource(config, 'public/css', 'application.css')
 
         # Configure our public and templates overrides.
         config['extra_public_paths'] = ','.join([our_public_dir,
