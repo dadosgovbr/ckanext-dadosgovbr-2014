@@ -31,8 +31,8 @@ class DadosGovBrTheme(SingletonPlugin):
                 'templates')
         
         # use new style plugin toolkit
-        plugins.toolkit.add_public_directory(config, 'public')
-        plugins.toolkit.add_resource(config, 'public/css', 'application.css')
+        ckan.plugins.toolkit.add_public_directory(config, 'public')
+        ckan.plugins.toolkit.add_resource('public/css', 'application.css')
 
         # Configure our public and templates overrides.
         config['extra_public_paths'] = ','.join([our_public_dir,
