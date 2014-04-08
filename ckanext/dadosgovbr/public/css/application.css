@@ -1577,9 +1577,8 @@ body {
 
     body > header.masthead #site_logo {
       float: left;
-      margin: 8px 0 12px;
+      margin: 8px 0 0;
       width: 220px;
-      height: 162px;
       width: 430px;
       /*background-image: url("../img/logo.png"); luiz>*/
       background-repeat: no-repeat;
@@ -1648,7 +1647,7 @@ body {
       width: 100px; /*saint */
       float: right;
       height: 35px;
-      margin-top: -115px; /*saint> */
+      margin-top: -32px;
       }
       body > header.masthead #news li {
         display: block;
@@ -1659,7 +1658,7 @@ body {
     }
         body > header.masthead #news li a {
           height: 36px;
-          width: 19px; /*saint> */
+          width: 20px; /*saint> */
           overflow: hidden;
           background-position: 0 0;
           background-image: url("../img/bg/bts_redes_brancos.png"); /* luiz> background-image: url("../img/bg/bts_redes.png");*/
@@ -1667,9 +1666,9 @@ body {
           padding-top: 35px;
        }
       body > header.masthead #news #twitter a {
-        background-position: -19px 0; /*saint> */}
-      body > header.masthead #news #identica a {
-        background-position: -38px 0; /*saint> */
+        background-position: -20px 0; /*saint> */}
+      body > header.masthead #news #github a {
+        background-position: -40px 0; /*saint> */
       }
     body > header.masthead nav {
       clear: both;
@@ -1681,8 +1680,6 @@ body {
       background: #0a5517;
       height:27px;
       left: 0px;
-      top: 138px;
-      position: absolute;
 
 }
       body > header.masthead nav a {

@@ -115,15 +115,27 @@
     <ul id="news">
       <li id="feed"><a rel="feed" href="/feed/" title="Inscrever-se no feed de notícias">feed</a></li>
       <li id="twitter"><a href="http://twitter.com/dadosgovbr" title="Microblog no Twitter">twitter</a></li>
-      <li id="identica"><a href="http://identi.ca/dadosgovbr" title="Microblog no identica">identica</a></li>
+      <li id="github"><a href="https://github.com/dadosgovbr" title="Códigos fonte de projetos do dados.gov.br no Github">identica</a></li>
      </ul>
     {% endblock %}
 
     <div class="content">
+      
+      {% block header_site_search %}
+        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+          <div class="field">
+            <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
+            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" />
+            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
+          </div>
+        </form>
+      {% endblock %}
+
+    </div>
 
       {% block header_site_navigation %}
         <nav class="section navigation">
-          <ul class="nav nav-pills">
+          <ul id="menu-horizontal" class="barra-apoio">
             {% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
@@ -136,17 +148,6 @@
         </nav>
       {% endblock %}
 
-      {% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
-          </div>
-        </form>
-      {% endblock %}
-
-    </div>
   </div>
 </header>
 {% endblock %}
