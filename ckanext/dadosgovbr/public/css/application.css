@@ -1653,7 +1653,7 @@ body {
         display: block;
         float: left;
         margin-right: 10px; /*luiz> margin-right: 15px;*/
-        height: 19px; /*luiz>  height: 36px;*/
+        height: 20px; /*luiz>  height: 36px;*/
         overflow: hidden;
     }
         body > header.masthead #news li a {
