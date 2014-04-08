@@ -15,7 +15,7 @@
           <h1> <span>${h.link_to(u"Dados em destaque", h.url_for(controller='group', action='read', id='dados-em-destaque'), class_="mais")}</span> </h1>
         <py:for each="link, title, notes in c.featured_datasets">
           <article>
-          <h2><a href="${link}">${title}‎</a></h2>
+          <h2><a href="${link}">${title}</a></h2>
           <p>${notes}</p>
           </article>
         </py:for>
