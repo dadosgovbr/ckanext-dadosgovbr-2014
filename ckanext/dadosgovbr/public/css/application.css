@@ -1521,7 +1521,6 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 124px; /* luiz> height: 288px;*/
 
     /*luiz> */
 	padding: 15px 0 0 0;
@@ -1676,14 +1675,8 @@ body {
       }
     body > header.masthead nav {
       clear: both;
-      /*margin-top: 8px; luiz> margin-top: 25px; */
-      float: right; /* luiz> float: left;*/
-      width: 100%;
-
-      /*luiz> */
       background: #0a5517;
       height:27px;
-      left: 0px;
 
 }
       body > header.masthead nav a {
