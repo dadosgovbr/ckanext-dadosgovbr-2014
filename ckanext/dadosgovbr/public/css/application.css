@@ -1517,12 +1517,6 @@ body {
   body:last-child:after {
     clear: both; }
   body > header.masthead {
-    /*background: url("../img/bg/bg_header.png") 0 0 repeat-x; luiz>*/
-    position: absolute;
-    left: 0;
-    width: 100%;
-
-    /*luiz> */
 	padding: 15px 0 0 0;
 	background-color: #19882c;
  /* Old browsers */
@@ -1546,10 +1540,7 @@ body {
     /*luiz>*/
 }
     body > header.masthead > .container {
-      width: 980px;
       max-width: 980px;
-      height: 100%;
-      /*background: url("../img/bg/bg_header_over.png") 0 0 no-repeat; luiz>*/
 }
     body > header.masthead #zoom {
       float: left;
@@ -1643,15 +1634,6 @@ body {
 
 /* Fim logo  */
 
-    body > header.masthead #news {
-      clear: both;
-      float: left;
-      margin-left: 20px;
-      width: 100px; /*saint */
-      float: right;
-      height: 35px;
-      margin-top: -32px;
-      }
       body > header.masthead #news li {
         display: block;
         float: left;
@@ -1768,13 +1750,6 @@ body {
           -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 3px 4px rgba(0, 0, 0, 0.2);
           -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 3px 4px rgba(0, 0, 0, 0.2);
           text-decoration: none; }
-  body div[role='main'] {
-    *zoom: 1;
-    margin-top: 173px;
-}
-  #main { /* pagina inicial */
-    margin-top: 190px;
-  }
     body div[role='main']:before, body div[role='main']:after {
       display: table;
       content: ""; }
@@ -1785,12 +1760,6 @@ body {
       margin-right: 2em; }
       body div[role='main'] div.type-page div.entry-content, body div[role='main'] div.type-post div.entry-content {
         margin-top: 1em; }
-    body div[role='main'] section {
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      margin-bottom: 30px;
-      background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
-      border: 1px solid #DDD; }
       body div[role='main'] section .nav-tabs {
         margin-top: 0;
         margin-bottom: 0; }
@@ -1822,56 +1791,6 @@ body {
       body div[role='main'] section h1, body div[role='main'] section p, body div[role='main'] section h2, body div[role='main'] section span {
         margin-left: 12px;
         margin-right: 12px; }
-      body div[role='main'] section h1 {
-        margin-left: 0;
-        margin-bottom: 1em;
-        display: block;
-        width: 100%;
-        height: 34px;
-        /* from: http://www.colorzilla.com/gradient-editor/#cebc9a+0,ffd375+100;Custom */
-        background: #cebc9a;
-        /* Old browsers */
-        background: #cebc9a;
-        /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NlYmM5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmQzNzUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(left, #cebc9a 0%, #ffd375 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cebc9a), color-stop(100%, #ffd375));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left, #cebc9a 0%, #ffd375 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left, #cebc9a 0%, #ffd375 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(left, #cebc9a 0%, #ffd375 100%);
-        /* IE10+ */
-        background: linear-gradient(left, #cebc9a 0%, #ffd375 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cebc9a', endColorstr='#ffd375',GradientType=1 );
-        /* IE6-8 */
-        /* end of colorzilla code */
-        font-size: 1.077em;
-        color: #FFFFFF;
-        text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.3);
-        border-top-left-radius: 5px;
-        -moz-border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        -moz-border-top-right-radius: 5px;
-        -webkit-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.3); }
-        body div[role='main'] section h1 span {
-          display: block;
-          height: 33px;
-          margin: 0;
-          padding: 0 20px;
-          background: url("../img/bg/bg_boxes_fino.png") 1px 0 repeat;
-          border-top-left-radius: 5px;
-          -moz-border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
-          -moz-border-top-right-radius: 5px;
-          -webkit-box-shadow: inset 0 0 5px #ffffff;
-          -moz-box-shadow: inset 0 0 5px #ffffff;
-          border-bottom: 1px solid #cccccc; }
       body div[role='main'] section h2 {
         font-size: 1.077em;
         line-height: 140%; }
@@ -1879,25 +1798,10 @@ body {
           color: inherit; }
       body div[role='main'] section p {
         font-size: 1em; }
-    body div[role='main'] form#search, body div[role='main'] #featureddata, body div[role='main'] #new {
+    body div[role='main'] form#search {
       float: left;
       margin-left: 20px;
       width: 540px; }
-    body div[role='main'] #top_apps {
-      float: left;
-      margin-left: 20px;
-      width: 380px;
-      height: 25.692em;
-      margin-top: -42px; }
-    body div[role='main'] #top_tags {
-      float: left;
-      margin-left: 20px;
-      width: 380px; }
-    body div[role='main'] #top_tags {
-      height: 19.077em; }
-    body div[role='main'] #featureddata {
-      margin-top: 20px;
-      height: 20.769em; }
     body div[role='main'] #top_tags
     .tags {
       margin-left: 1em; }
@@ -1955,8 +1859,6 @@ body {
       body div[role='main'] form#search p {
         color: gray;
         margin-top: -0.3em; }
-    body div[role='main'] #new {
-      height: 19.077em; }
       body div[role='main'] #new p {
         padding-bottom: 4px;
         border-bottom: 1px solid darkgray; }
@@ -2008,7 +1910,6 @@ body {
       background: none;
       border: 0; }
       body div[role='main'] #top_apps .tab-content {
-        height: 22.923em;
         background: #ececec url("../img/bg/bg_boxes.png") 0 0 repeat;
         border: 1px solid #DDD;
         -moz-border-bottom-right-radius: 5px;
@@ -2018,12 +1919,6 @@ body {
         body div[role='main'] #top_apps .tab-content a {
           color: inherit;
           font-weight: bold; }
-    body div[role='main'] p.mais {
-      float: right;
-      margin-top: -2.1em; }
-    body div[role='main'] a.mais, body div[role='main'] a.mais:link, body div[role='main'] a.mais:visited, body div[role='main'] a.mais:hover {
-      color: white;
-      text-decoration: none; }
 
 body.index .span9.content-outer {
   width: 100%; }

@@ -88,7 +88,7 @@
     </div>
     </py:with>
 
-    <div id="main" class="container" role="main">
+    <div class="container">
     <!--<div id="menu-lateral">
             <nav>
           <ul>
@@ -143,16 +143,7 @@
         <img py:if="defined('page_logo')" id="page-logo" src="${page_logo()}" alt="Page Logo" />
         ${page_heading()}
       </h1>
-      <div class="row">
-        <div class="span12">
-          <div id="minornavigation">
-              <minornavigation></minornavigation>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="span9 content-outer">
           <div id="content">
             <py:if test="defined('content')">
               ${content()}
@@ -161,7 +152,6 @@
               <p>Master content template placeholder &hellip; please replace me.</p>
             </content>
           </div> <!-- /content -->
-        </div>
         <div class="span3 sidebar-outer">
           <div id="sidebar">
             <ul class="widget-list">
@@ -174,7 +164,6 @@
             </ul>
           </div>
         </div>
-      </div>
     <!--</div>-->
     <br/><br/>
   </div>
