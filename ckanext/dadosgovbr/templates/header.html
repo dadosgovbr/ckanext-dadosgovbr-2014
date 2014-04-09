@@ -136,14 +136,18 @@
       {% block header_site_navigation %}
         <nav class="section navigation">
           <ul id="menu-horizontal" class="barra-apoio">
-            {% block header_site_navigation_tabs %}
+           {# {% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
                 ('group_index', _('Groups')),
                 ('about', _('About'))
               ) }}
-            {% endblock %}
+            {% endblock %} #}
+		<li class="first"><a href="/dataset/">Dados</a></li>
+                <li><a href="/faq/">Perguntas frequentes</a></li>
+                <li><a href="/contato/">Contato</a></li>
+                <li><a href="/sobre/">Sobre o portal</a></li>
           </ul>
         </nav>
       {% endblock %}
