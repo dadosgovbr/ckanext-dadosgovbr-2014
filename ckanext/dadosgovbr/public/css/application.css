@@ -1601,7 +1601,7 @@ body {
     }
     
     #site_logo h2 {
-        line-height: 8.0;
+        line-height: 4;
     }
     
     #site_logo a,
@@ -1675,7 +1675,6 @@ body {
       }
     body > header.masthead nav {
       clear: both;
-      background: #0a5517;
       height:27px;
 
 }
@@ -2167,9 +2166,22 @@ body.no-sidebar .row .content-outer {
       border: 1px solid #DDD;
 }
 
+#barra-menu {
+      clear: both;
+      background: black;
+      height: 27px;
+      position: absolute;
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+      width: 100%;
+}
+
 #menu-horizontal {
+    float: none;
     max-width:955px;
     margin: 0 auto;
+    z-index: 1;
+    position: relative;
 }
 
 #menu-horizontal a {

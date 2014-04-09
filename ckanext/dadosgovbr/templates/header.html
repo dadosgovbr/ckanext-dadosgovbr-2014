@@ -132,10 +132,12 @@
       {% endblock %}
 
     </div>
+  </div>
     <div id="barra-menu">
+    </div>
       {% block header_site_navigation %}
-        <nav class="section navigation">
-          <ul id="menu-horizontal" class="barra-apoio">
+        <nav id="menu-horizontal" class="section navigation">
+          <ul class="barra-apoio">
            {# {% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
@@ -152,7 +154,5 @@
           </ul>
         </nav>
       {% endblock %}
-    </div>
-  </div>
 </header>
 {% endblock %}
