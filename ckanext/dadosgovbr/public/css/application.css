@@ -1770,8 +1770,11 @@ body {
           text-decoration: none; }
   body div[role='main'] {
     *zoom: 1;
-    margin-top: 190px; /* luiz> margin-top: 308px;*/
+    margin-top: 173px;
 }
+  #main { /* pagina inicial */
+    margin-top: 190px;
+  }
     body div[role='main']:before, body div[role='main']:after {
       display: table;
       content: ""; }

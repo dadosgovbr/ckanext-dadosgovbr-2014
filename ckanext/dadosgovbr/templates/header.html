@@ -3,6 +3,7 @@
     <a href="http://brasil.gov.br" style="background:#7F7F7F; height: 20px; padding:4px 0 4px 10px; display: block; font-family:sans,sans-serif; text-decoration:none; color:white; ">Portal do Governo Brasileiro</a>
 </div>
 {% block header_account %}
+  {% if c.userobj %}{# if para desabilitar a barra de login #}
   <header class="account-masthead">
     <div class="container">
       {% block header_account_container_content %}
@@ -63,6 +64,7 @@
       {% endblock %}
     </div>
   </header>
+  {% endif %}
 {% endblock %}
 <header class="masthead">
   {% block header_debug %}
