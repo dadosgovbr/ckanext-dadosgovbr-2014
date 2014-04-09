@@ -786,6 +786,10 @@ select:focus:required:invalid {
   .input-append input:first-child + .add-on {
     *margin-left: -21px; }
 
+#field-sitewide-search {
+  width: 230px;
+}
+
 .search-query {
   padding-left: 14px;
   padding-right: 14px;
