@@ -1808,8 +1808,6 @@ body > header.masthead #news {
       body div[role='main'] section p {
         font-size: 1em; }
     body div[role='main'] form#search {
-      float: left;
-      margin-left: 20px;
       width: 540px; }
     body div[role='main'] #top_tags
     .tags {
@@ -1832,8 +1830,7 @@ body > header.masthead #news {
           text-decoration: none;
           color: #FFFFFF; }
     body div[role='main'] form#search {
-      margin-bottom: 0;
-      height: 30px;
+      margin-bottom: 20px;
       padding: 5px;
       width: 530px;
       background: -moz-linear-gradient(top, #eeeeee 0%, #dddddd);

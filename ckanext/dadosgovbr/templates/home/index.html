@@ -8,13 +8,13 @@
 
     <div class="container" role="main">
       <div class="row row1">
-        <form action="/dataset" id="search" method="GET">
-          <input class="search-field" name="q" type="text" placeholder="Pesquisa ..." id="busca" />
-          <input type="submit" alt="buscar" value="Pesquisar" id="btnbusca" />
-          <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos <span class="faq-link"><a href="/faq/#q10">(o que é isto?)</a></span></p>
-        </form>
 
         <div class="span7 col1">
+          <form action="/dataset" id="search" method="GET">
+            <input class="search-field" name="q" type="text" placeholder="Pesquisa ..." id="busca" />
+            <input type="submit" alt="buscar" value="Pesquisar" id="btnbusca" />
+            <p>em ${c.package_count} conjuntos de dados com ${c.resource_count} recursos <span class="faq-link"><a href="/faq/#q10">(o que é isto?)</a></span></p>
+          </form>
           <div class="box">
             <section id="featureddata" class="group-list module module-narrow module-shadow">
               <header class="module-heading">
