@@ -1634,6 +1634,15 @@ body {
 
 /* Fim logo  */
 
+body > header.masthead #news {
+      clear: both;
+      float: left;
+      margin-left: 20px;
+      width: 100px; /*saint */
+      float: right;
+      height: 35px;
+      margin-top: -32px;
+      }
       body > header.masthead #news li {
         display: block;
         float: left;
