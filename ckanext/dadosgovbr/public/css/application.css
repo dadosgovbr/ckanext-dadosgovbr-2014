@@ -1517,7 +1517,7 @@ body {
   body:last-child:after {
     clear: both; }
   body > header.masthead {
-	padding: 15px 0 0 0;
+	/* padding: 15px 0 0 0; */
 	background-color: #19882c;
  /* Old browsers */
 	background-color: #0A5517;
